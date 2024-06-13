@@ -57,7 +57,28 @@ export default function Resume(props: PageProps) {
           </div>
         </div>
       </section>
-      <section className="space-y-2 p-4">
+      <section className="space-y-1 p-2">
+        <h2 className="text-2xl font-bold">Education</h2>
+        <div>
+          <p className="flex justify-between font-bold">
+            <span className="w-fit rounded-md bg-gray-300 px-2">
+              IMT Lille-Douai
+            </span>
+            <span>2012 - 2017</span>
+          </p>
+          <p className="flex gap-1">
+            <b>Software engineer major</b>
+            <span className="text-neutral-700">
+              // with a foreign semester in South Korea at Chugnam National Univ.
+            </span>
+          </p>
+          <p className="italic">
+            Internship at Capgemini, GFI, Alliance Française Limassol, Lille 2 University, Norauto
+          </p>
+
+        </div>
+      </section>
+      <section className="space-y-1 p-2">
         <h2 className="text-2xl font-bold">Technical Skills</h2>
         <p className="flex flex-wrap gap-2 indent-6">
           <span className="font-bold">Programming Languages:</span>
@@ -656,90 +677,92 @@ export default function Resume(props: PageProps) {
                 />
               </g>
             </svg>
-            Linux.
+            Linux
           </span>
         </p>
       </section>
-      <section className="space-y-2 p-4">
+      <section className="space-y-2 p-2">
         <h2 className="text-2xl font-bold">Work Experience</h2>
         <div>
-          <p className="my-px mt-4 flex justify-between font-bold">
-            <span className="w-fit rounded-md bg-gray-300 px-2">
-              Freelance Web Developer
-            </span>
-            <span>2018 - 2021</span>
-          </p>
-          <p className="italic">
-            Delivered high-quality services, managed end-to-end web development
-            projects for clients from all over the world.
-          </p>
-        </div>
-        <div>
-          <p className="my-px mt-4 flex justify-between font-bold">
+          <p className="flex justify-between font-bold">
             <span className="w-fit rounded-md bg-gray-300 px-2">
               Full Stack Developer
             </span>
-            <span>2021 - 2022</span>
+            <span>2020 - Present</span>
           </p>
           <p className="flex gap-1">
-            <b>Company:</b>SPWorlds
+            <b>Qynapse</b>
             <span className="text-neutral-700">
-            // One of the biggest Minecraft Server Networks in Russia
+              // A healthcare technology company specializing in neuroimaging and AI
             </span>
           </p>
           <p className="italic">
-            Led a small team developing and maintaining an interactive web
-            application and an open API. Moved the project through breaking
-            changes. Worked with TypeScript, Node.js, SvelteKit, Tailwind.
+            Qyscore Web App:
+            <ul className="list-disc pl-6">
+              <li> Built a new viewer structure with Cornerstone and React Admin.</li>
+              <li> Integrated Cypress for end-to-end testing.</li>
+              <li> Optimized the cache and memory usage mechanism.</li>
+            </ul>
+            Report:
+            <ul className="list-disc pl-6">
+              <li> Improved PDF generation with Puppeteer and enhanced testing procedures.</li>
+              <li> Reworked the PDF generation process.</li>
+              <li> Implemented internationalization with .pot files.</li>
+            </ul>
+            DIMSE Agent:
+            <ul className="list-disc pl-6">
+              <li> Maintained the DIMSE agent for efficient and secure data ingestion.</li>
+            </ul>
+            Libraries:
+            <ul className="list-disc pl-6">
+              <li> Created a normative library for percentiles and z-scores.</li>
+              <li> Developed microservices for mesh and slice operations.</li>
+            </ul>
           </p>
         </div>
         <div>
-          <p className="my-px mt-4 flex justify-between font-bold">
+          <p className="flex justify-between font-bold">
             <span className="w-fit rounded-md bg-gray-300 px-2">
               Full Stack Developer
             </span>
-            <span>2022 - 2023</span>
+            <span>2017 - 2020</span>
           </p>
           <p className="flex gap-1">
-            <b>Company:</b>Vmeste
+            <b>Alter Solutions</b>
             <span className="text-neutral-700">
-            // A startup with a mission to connect Russians living abroad
+              // A consulting and IT services company
             </span>
           </p>
           <p className="italic">
-            Мigrated an old JS + React site to a modern stack (TypeScript,
-            Next.js, tRPC, Tailwind CSS). Rapidly delivered new features to both
-            backend and frontend. Worked on the CI/CD pipeline.
-          </p>
-        </div>
-        <div>
-          <p className="my-px mt-4 flex justify-between font-bold">
-            <span className="w-fit rounded-md bg-gray-300 px-2">
-              Frontend Developer (Part-time)
-            </span>
-            <span>2023</span>
-          </p>
-          <p className="flex gap-1">
-            <b>Company:</b>Suvvy AI
-            <span className="text-neutral-700">
-            // A startup that integrates ChatGPT into different CRMs
-            </span>
-          </p>
-          <p className="italic">
-            Was a sole frontend developer on a small startup. Worked with SolidJS,
-            TailwindCSS, TanStack Query, i18next
+            IRT System X: Central Dashboard promoting research project webservices
+            <ul className="list-disc pl-6">
+              <li> Develop the whole application from scratch.</li>
+            </ul>
+            SFR Altice Group: Brand-new customer service web app
+            <ul className="list-disc pl-6">
+              <li> Refactor the whole custom CRM with new technologies and architecture. </li>
+              <li> Added core feature (Mail/SMS notification, Tray system, ...) .</li>
+            </ul>
+            Thalès: Local web app displaying military data from Excel file
+            <ul className="list-disc pl-6">
+              <li> Create a user-friendly tool for data vizualizing inventory file (.xlsx).</li>
+            </ul>
+            PSA: Online tool to parse automobile file format (.a2l and .hex, .ulp)
+            <ul className="list-disc pl-6">
+              <li> Set up a backend service for parsing efficiently raw data files.</li>
+            </ul>
           </p>
         </div>
       </section>
-      <section className="space-y-2 p-4">
-        <h2 className="text-2xl font-bold">Open-Source Projects</h2>
+      <section className="space-y-1 p-2">
+        <h2 className="text-2xl font-bold">Projects & Rewards</h2>
         <p className="flex gap-1">
-          <span className="font-bold">Ronix</span>
+          <span className="font-bold">LOM</span>
           <span className="flex">
             (
             <a
               className="underline"
-              href="https://github.com/tmessaoudi"
+              href="https://github.com/tmessaoudi/js-canvas-map"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -747,93 +770,23 @@ export default function Resume(props: PageProps) {
             </a>
             ) -
           </span>
-          <span className="italic">Linux music player and library manager</span>.
+          <span className="italic">Browser strategy game.</span>
         </p>
         <p className="flex gap-1">
-          <span className="font-bold">My FAQ Page</span>
+          <span className="font-bold">"Entreprise du Futur" Reward</span>
           <span className="flex">
             (
-            <span className="mr-1">
               <a
                 className="underline"
-                href="https://myfaq.page/"
+              href="https://challengeentreprendre.wp.imt.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Site
-              </a>
-              ,
-            </span>
-            <a
-              className="underline"
-              href="https://github.com/ronanru/myfaq.page"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
             </a>
             ) -
           </span>
-          <span className="italic">An FAQ Page generator web app</span>.
-        </p>
-        <p className="flex gap-1">
-          <span className="font-bold">ArchExplorer</span>
-          <span className="flex">
-            (
-            <span className="mr-1">
-              <a
-                className="underline"
-                href="https://archexplorer.ronanru.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Site
-              </a>
-              ,
-            </span>
-            <a
-              className="underline"
-              href="https://github.com/ronanru/ArchExplorer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            ) -
-          </span>
-          <span className="italic">A search engline for Arch Linux packages</span>
-          .
-        </p>
-        <br />
-        <p>
-          I'm a frequent open-source contributer, I contributed to
-          <a
-            className="underline"
-            href="https://github.com/t3-oss/create-t3-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            create-t3-app
-          </a>
-          ,
-          <a
-            className="underline"
-            href="https://github.com/pop-os/shell"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            pop-shell
-          </a>
-          ,
-          <a
-            className="underline"
-            href="https://github.com/codicocodes/dotfyle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            dotfyle
-          </a>
-          , and multiple other open-source projects.
+          <span className="italic">By Thalès, from Challenge Entreprendre.</span>
         </p>
       </section>
     </div>
