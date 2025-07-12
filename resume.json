@@ -20,11 +20,11 @@
         "network": "LinkedIn",
         "username": "tmessaoudi",
         "url": "https://linkedin.com/in/tmessaoudi/"
-      },	
-      {	
-        "url": "https://github.com/tmessaoudi",	
-        "username": "tmessaoudi",	
-        "network": "github"	
+      },
+      {
+        "url": "https://github.com/tmessaoudi",
+        "username": "tmessaoudi",
+        "network": "github"
       }
     ]
   },
@@ -33,7 +33,17 @@
       "name": "Qynapse",
       "position": "Senior Full Stack Engineer",
       "startDate": "2020-11-30",
-      "highlights": ["JavaScript", "TypeScript", "Python", "Kubernetes", "React", "Tailwind", "FastApi", "PostgreSQL", "DICOM"],
+      "highlights": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Kubernetes",
+        "React",
+        "Tailwind",
+        "FastApi",
+        "PostgreSQL",
+        "DICOM"
+      ],
       "url": "https://www.linkedin.com/company/qynapse/",
       "summary": "I mainly contributed to the development of the core product : Qyscore.Key Achievements:\nViewer:\nBuilt a new viewer structure with Cornerstone and React Admin.\nIntegrated Cypress for end-to-end testing.\nOptimized the cache and memory usage mechanism\nReport:\nImproved PDF generation with Puppeteer and enhanced testing procedures.\nReworked the PDF generation process.\nImplemented internationalization with .pot files.\nDIMSE Agent:\nMaintained the DIMSE agent for efficient and secure data ingestion.\nLibraries:\nCreated a normative library for percentiles and z-scores.\nDeveloped microservices for mesh and slice operations.",
       "location": "Ville de Paris, Île-de-France, France"

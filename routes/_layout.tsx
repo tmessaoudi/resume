@@ -5,8 +5,7 @@ export default function Layout({ Component, state }: PageProps) {
   return (
     <div class="flex">
       <div class="flex-grow">
-
-      <Component />
+        <Component />
       </div>
     </div>
   );

@@ -3,19 +3,26 @@ import {
   DenoIcon,
   DockerIcon,
   FastApiIcon,
+  GitHubIcon,
   GitIcon,
   JavaIcon,
   JavaScriptIcon,
+  KubernetesIcon,
   LinuxIcon,
+  MailIcon,
+  MongoIcon,
   NodeJsIcon,
+  PostgreSQLIcon,
   PythonIcon,
   ReactIcon,
   RedisIcon,
   RemixIcon,
   SpringIcon,
   SQLIcon,
+  SqliteIcon,
   TailwindcssIcon,
   TypeScriptIcon,
+  WebsiteIcon,
 } from "../../components/SVGIcons.tsx";
 import Print from "../../islands/Print.tsx";
 
@@ -23,7 +30,7 @@ export default function Resume(props: PageProps) {
   return (
     <main className="text-sm flex min-h-screen flex-col items-center justify-center gap-2 bg-gray-200 print:min-h-0">
       <div className="relative m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
-        <section className="mb-4 flex items-stretch justify-between border-b border-black p-4">
+        <section className="mb-2 flex items-stretch justify-between border-b border-black p-1">
           <div className="flex flex-col gap-2">
             <div className="flex flex-1 flex-col justify-center gap-2">
               <h1 className="text-4xl font-bold">Tarek Messaoudi</h1>
@@ -36,13 +43,7 @@ export default function Resume(props: PageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg viewBox="0 0 24 24" className="h-5 w-5">
-                  <path
-                    fill="currentColor"
-                    d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"
-                  >
-                  </path>
-                </svg>
+                <WebsiteIcon />
                 tarek.messaoudi.dev
               </a>
               <a
@@ -51,35 +52,20 @@ export default function Resume(props: PageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"
-                  >
-                  </path>
-                </svg>{" "}
+                <GitHubIcon />
                 github.com/tmessaoudi
               </a>
               <a
                 href="mailto:tmessaoudi94@gmail.com"
                 className="flex items-center gap-1"
               >
-                <svg viewBox="0 0 24 24" className="h-5 w-5">
-                  <path
-                    fill="currentColor"
-                    d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
-                  >
-                  </path>
-                </svg>{" "}
+                <MailIcon />
                 tmessaoudi94@gmail.com
               </a>
             </div>
           </div>
         </section>
-        <section className="space-y-1 p-2">
+        <section className="space-y-1 px-2 py-1">
           <h2 className="text-2xl font-bold">Education</h2>
           <div>
             <p className="flex justify-between font-bold">
@@ -99,7 +85,7 @@ export default function Resume(props: PageProps) {
             </p>
           </div>
         </section>
-        <section className="space-y-1 p-2">
+        <section className="space-y-1 px-2 py-1">
           <h2 className="text-2xl font-bold">Technical Skills</h2>
           <p className="flex flex-wrap gap-2 indent-6">
             <span className="font-bold">Programming Languages:</span>
@@ -155,22 +141,37 @@ export default function Resume(props: PageProps) {
             </span>
           </p>
           <p className="flex flex-wrap gap-2 indent-6">
+            <span className="font-bold">Database :</span>
+            <span className="flex items-center gap-1 indent-0">
+              <PostgreSQLIcon />
+              PostgresSQL,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <SqliteIcon />
+              SQLite,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <MongoIcon />
+              MongoDB,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <RedisIcon />
+              REDIS
+            </span>
+          </p>
+          <p className="flex flex-wrap gap-2 indent-6">
             <span className="font-bold">Other Technologies:</span>
             <span className="flex items-center gap-1 indent-0">
               <DockerIcon />
               Docker,
             </span>
             <span className="flex items-center gap-1 indent-0">
+              <KubernetesIcon />
+              Kubernetes,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
               <GitIcon />
               Git,
-            </span>
-            <span className="flex items-center gap-1 indent-0">
-              <SQLIcon />
-              SQL,
-            </span>
-            <span className="flex items-center gap-1 indent-0">
-              <RedisIcon />
-              REDIS,
             </span>
             <span className="flex items-center gap-1 indent-0">
               <LinuxIcon />
@@ -178,7 +179,7 @@ export default function Resume(props: PageProps) {
             </span>
           </p>
         </section>
-        <section className="space-y-2 p-2">
+        <section className="space-y-2 px-2 py-1">
           <h2 className="text-2xl font-bold">Work Experience</h2>
           <div>
             <p className="flex justify-between font-bold">
@@ -287,7 +288,7 @@ export default function Resume(props: PageProps) {
             </p>
           </div>
         </section>
-        <section className="space-y-1 p-2">
+        <section className="space-y-1 px-2 py-1">
           <h2 className="text-2xl font-bold">Projects & Rewards</h2>
           <p className="flex gap-1">
             <span className="font-bold">LOM</span>
