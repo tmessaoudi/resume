@@ -1,795 +1,331 @@
-import { PageProps } from "$fresh/server.ts"
-import Print from "../../islands/Print.tsx"
+import { PageProps } from "$fresh/server.ts";
+import {
+  DenoIcon,
+  DockerIcon,
+  FastApiIcon,
+  GitIcon,
+  JavaIcon,
+  JavaScriptIcon,
+  LinuxIcon,
+  NodeJsIcon,
+  PythonIcon,
+  ReactIcon,
+  RedisIcon,
+  RemixIcon,
+  SpringIcon,
+  SQLIcon,
+  TailwindcssIcon,
+  TypeScriptIcon,
+} from "../../components/SVGIcons.tsx";
+import Print from "../../islands/Print.tsx";
 
 export default function Resume(props: PageProps) {
-  return <main className="text-sm flex min-h-screen flex-col items-center justify-center gap-2 bg-gray-200 print:min-h-0">
-    <div className="relative m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
-      <section className="mb-4 flex items-stretch justify-between border-b border-black p-4">
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-1 flex-col justify-center gap-2">
-            <h1 className="text-4xl font-bold">Tarek Messaoudi</h1>
-            <h2 className="text-xl">Full Stack Developer</h2>
-          </div>
-          <div className="flex gap-4">
-            <a
-              href="https://tarek.messaoudi.dev"
-              className="flex items-center gap-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" >
-                <path
-                  fill="currentColor"
-                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"
-                ></path>
-              </svg>
-              tarek.messaoudi.dev
-            </a>
-            <a
-              href="https://github.com/tmessaoudi"
-              className="flex items-center gap-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-5 w-5"
+  return (
+    <main className="text-sm flex min-h-screen flex-col items-center justify-center gap-2 bg-gray-200 print:min-h-0">
+      <div className="relative m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
+        <section className="mb-4 flex items-stretch justify-between border-b border-black p-4">
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-1 flex-col justify-center gap-2">
+              <h1 className="text-4xl font-bold">Tarek Messaoudi</h1>
+              <h2 className="text-xl">Full Stack Developer</h2>
+            </div>
+            <div className="flex gap-4">
+              <a
+                href="https://tarek.messaoudi.dev"
+                className="flex items-center gap-1"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <path
-                  fill="currentColor"
-                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"
-                ></path>
-              </svg>{" "}
-              github.com/tmessaoudi
-            </a>
-            <a
-              href="mailto:tmessaoudi94@gmail.com"
-              className="flex items-center gap-1"
-            >
-              <svg viewBox="0 0 24 24" className="h-5 w-5">
-                <path
-                  fill="currentColor"
-                  d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
-                ></path>
-              </svg>{" "}
-              tmessaoudi94@gmail.com
-            </a>
+                <svg viewBox="0 0 24 24" className="h-5 w-5">
+                  <path
+                    fill="currentColor"
+                    d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"
+                  >
+                  </path>
+                </svg>
+                tarek.messaoudi.dev
+              </a>
+              <a
+                href="https://github.com/tmessaoudi"
+                className="flex items-center gap-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"
+                  >
+                  </path>
+                </svg>{" "}
+                github.com/tmessaoudi
+              </a>
+              <a
+                href="mailto:tmessaoudi94@gmail.com"
+                className="flex items-center gap-1"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5">
+                  <path
+                    fill="currentColor"
+                    d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
+                  >
+                  </path>
+                </svg>{" "}
+                tmessaoudi94@gmail.com
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="space-y-1 p-2">
-        <h2 className="text-2xl font-bold">Education</h2>
-        <div>
-          <p className="flex justify-between font-bold">
-            <span className="w-fit rounded-md bg-gray-300 px-2">
-              IMT Lille-Douai
+        </section>
+        <section className="space-y-1 p-2">
+          <h2 className="text-2xl font-bold">Education</h2>
+          <div>
+            <p className="flex justify-between font-bold">
+              <span className="w-fit rounded-md bg-gray-300 px-2">
+                IMT Lille-Douai
+              </span>
+              <span>2012 - 2017</span>
+            </p>
+            <p className="flex gap-1">
+              <b>Software engineer major</b>
+              <span className="text-neutral-700">
+                // with a foreign semester in South Korea at Chugnam National Univ.
+              </span>
+            </p>
+            <p className="italic">
+              Internship at Capgemini, GFI, Alliance Française Limassol, Lille 2 University, Norauto
+            </p>
+          </div>
+        </section>
+        <section className="space-y-1 p-2">
+          <h2 className="text-2xl font-bold">Technical Skills</h2>
+          <p className="flex flex-wrap gap-2 indent-6">
+            <span className="font-bold">Programming Languages:</span>
+            <span className="flex items-center gap-1 indent-0">
+              <TypeScriptIcon />
+              TypeScript,
             </span>
-            <span>2012 - 2017</span>
+            <span className="flex items-center gap-1 indent-0">
+              <JavaScriptIcon />
+              JavaScript,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <PythonIcon />
+              Python,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <JavaIcon />
+              Java
+            </span>
           </p>
+          <p className="flex flex-wrap gap-2 indent-6">
+            <span className="font-bold">Frontend Development:</span>
+            <span className="flex items-center gap-1 indent-0">
+              <ReactIcon />
+              React,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <TailwindcssIcon />
+              Tailwind CSS,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <RemixIcon />
+              Remix
+            </span>
+          </p>
+          <p className="flex flex-wrap gap-2 indent-6">
+            <span className="font-bold">Backend Development :</span>
+            <span className="flex items-center gap-1 indent-0">
+              <NodeJsIcon />
+              NodeJs,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <DenoIcon />
+              Deno,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <FastApiIcon />
+              FastApi,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <SpringIcon />
+              Spring
+            </span>
+          </p>
+          <p className="flex flex-wrap gap-2 indent-6">
+            <span className="font-bold">Other Technologies:</span>
+            <span className="flex items-center gap-1 indent-0">
+              <DockerIcon />
+              Docker,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <GitIcon />
+              Git,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <SQLIcon />
+              SQL,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <RedisIcon />
+              REDIS,
+            </span>
+            <span className="flex items-center gap-1 indent-0">
+              <LinuxIcon />
+              Linux
+            </span>
+          </p>
+        </section>
+        <section className="space-y-2 p-2">
+          <h2 className="text-2xl font-bold">Work Experience</h2>
+          <div>
+            <p className="flex justify-between font-bold">
+              <span className="w-fit rounded-md bg-gray-300 px-2">
+                Full Stack Developer
+              </span>
+              <span>2020 - Present</span>
+            </p>
+            <p className="flex gap-1">
+              <b>Qynapse</b>
+              <span className="text-neutral-700">
+                // A healthcare technology company specializing in neuroimaging and AI
+              </span>
+            </p>
+            <p className="italic">
+              <span className="flex items-center gap-1 indent-0">
+                Qyscore Web App: <TypeScriptIcon /> / <ReactIcon /> / <TailwindcssIcon /> / <FastApiIcon /> /{" "}
+                <SQLIcon /> / <RedisIcon />
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Built a new viewer structure with Cornerstone and React Admin.
+                </li>
+                <li>Integrated Cypress for end-to-end testing.</li>
+                <li>Optimized the cache and memory usage mechanism.</li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                Report: <PythonIcon /> / <DockerIcon />
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Improved PDF generation with Puppeteer and enhanced testing procedures.
+                </li>
+                <li>Reworked the PDF generation process.</li>
+                <li>Implemented internationalization with .pot files.</li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                DIMSE Agent: <PythonIcon /> / <DockerIcon />
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Maintained the DIMSE agent for efficient and secure data ingestion.
+                </li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                Libraries: <PythonIcon /> / <DockerIcon />
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Created a normative library for percentiles and z-scores.
+                </li>
+                <li>Developed microservices for mesh and slice operations.</li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <p className="flex justify-between font-bold">
+              <span className="w-fit rounded-md bg-gray-300 px-2">
+                Full Stack Developer
+              </span>
+              <span>2017 - 2020</span>
+            </p>
+            <p className="flex gap-1">
+              <b>Alter Solutions</b>
+              <span className="text-neutral-700">
+                // A consulting and IT services company
+              </span>
+            </p>
+            <p className="italic">
+              <span className="flex items-center gap-1 indent-0">
+                IRT System X: <TypeScriptIcon /> / <ReactIcon /> / <TailwindcssIcon /> / <NodeJsIcon />{" "}
+                Central Dashboard promoting research project webservices
+              </span>
+              <ul className="list-disc pl-6">
+                <li>Develop the whole application from scratch.</li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                SFR Altice Group: <TypeScriptIcon /> / <ReactIcon /> / <JavaIcon /> / <SpringIcon />{" "}
+                Brand-new customer service web app
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Refactor the whole custom CRM with new technologies and architecture.
+                </li>
+                <li>
+                  Added core feature (Mail/SMS notification, Tray system, ...) .
+                </li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                Thalès: <JavaScriptIcon /> / <ReactIcon /> / <JavaIcon />{" "}
+                Local web app displaying military data from Excel file
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Create a user-friendly tool for data vizualizing inventory file (.xlsx).
+                </li>
+              </ul>
+              <span className="flex items-center gap-1 indent-0">
+                PSA: <JavaIcon /> / <SpringIcon /> Online tool to parse automobile file format (.a2l and .hex, .ulp)
+              </span>
+              <ul className="list-disc pl-6">
+                <li>
+                  Set up a backend service for parsing efficiently raw data files.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </section>
+        <section className="space-y-1 p-2">
+          <h2 className="text-2xl font-bold">Projects & Rewards</h2>
           <p className="flex gap-1">
-            <b>Software engineer major</b>
-            <span className="text-neutral-700">
-              // with a foreign semester in South Korea at Chugnam National Univ.
-            </span>
-          </p>
-          <p className="italic">
-            Internship at Capgemini, GFI, Alliance Française Limassol, Lille 2 University, Norauto
-          </p>
-
-        </div>
-      </section>
-      <section className="space-y-1 p-2">
-        <h2 className="text-2xl font-bold">Technical Skills</h2>
-        <p className="flex flex-wrap gap-2 indent-6">
-          <span className="font-bold">Programming Languages:</span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 256"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#3178C6"
-                d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0Z"
-              ></path>
-              <path
-                fill="#FFF"
-                d="M150.518 200.475v27.62c4.492 2.302 9.805 4.028 15.938 5.179 6.133 1.151 12.597 1.726 19.393 1.726 6.622 0 12.914-.633 18.874-1.899 5.96-1.266 11.187-3.352 15.678-6.257 4.492-2.906 8.048-6.704 10.669-11.394 2.62-4.689 3.93-10.486 3.93-17.391 0-5.006-.749-9.394-2.246-13.163a30.748 30.748 0 0 0-6.479-10.055c-2.821-2.935-6.205-5.567-10.149-7.898-3.945-2.33-8.394-4.531-13.347-6.602-3.628-1.497-6.881-2.949-9.761-4.359-2.879-1.41-5.327-2.848-7.342-4.316-2.016-1.467-3.571-3.021-4.665-4.661-1.094-1.64-1.641-3.495-1.641-5.567 0-1.899.489-3.61 1.468-5.135s2.362-2.834 4.147-3.927c1.785-1.094 3.973-1.942 6.565-2.547 2.591-.604 5.471-.906 8.638-.906 2.304 0 4.737.173 7.299.518 2.563.345 5.14.877 7.732 1.597a53.669 53.669 0 0 1 7.558 2.719 41.7 41.7 0 0 1 6.781 3.797v-25.807c-4.204-1.611-8.797-2.805-13.778-3.582-4.981-.777-10.697-1.165-17.147-1.165-6.565 0-12.784.705-18.658 2.115-5.874 1.409-11.043 3.61-15.506 6.602-4.463 2.993-7.99 6.805-10.582 11.437-2.591 4.632-3.887 10.17-3.887 16.615 0 8.228 2.375 15.248 7.127 21.06 4.751 5.811 11.963 10.731 21.638 14.759a291.458 291.458 0 0 1 10.625 4.575c3.283 1.496 6.119 3.049 8.509 4.66 2.39 1.611 4.276 3.366 5.658 5.265 1.382 1.899 2.073 4.057 2.073 6.474a9.901 9.901 0 0 1-1.296 4.963c-.863 1.524-2.174 2.848-3.93 3.97-1.756 1.122-3.945 1.999-6.565 2.632-2.62.633-5.687.95-9.2.95-5.989 0-11.92-1.05-17.794-3.151-5.875-2.1-11.317-5.25-16.327-9.451Zm-46.036-68.733H140V109H41v22.742h35.345V233h28.137V131.742Z"
-              ></path>
-            </svg>
-            TypeScript,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 256"
-              className="h-4 w-4"
-
-            >
-              <path fill="#F7DF1E" d="M0 0h256v256H0V0Z" />
-              <path d="m67.312 213.932 19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576 19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path>
-            </svg>
-            JavaScript,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.01em" height="1em" viewBox="0 0 256 255" >
-              <defs>
-                <linearGradient id="logosPython0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-                  <stop offset="0%" stop-color="#387eb8" />
-                  <stop offset="100%" stop-color="#366994" />
-                </linearGradient>
-                <linearGradient id="logosPython1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-                  <stop offset="0%" stop-color="#ffe052" />
-                  <stop offset="100%" stop-color="#ffc331" />
-                </linearGradient>
-              </defs>
-              <path fill="url(#logosPython0)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072M92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13" />
-              <path fill="url(#logosPython1)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897m34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13" />
-            </svg>
-
-            Python,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="0.74em" height="1em" viewBox="0 0 256 346" >
-              <path fill="#5382a1" d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034c0 0 7.93 4.972 19.003 9.279c-67.611 28.977-153.019-1.679-99.913-16.517m-8.262-37.814s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43c0 0 5.526 5.602 14.215 8.666c-81.747 23.904-172.798 1.885-114.296-17.532" />
-              <path fill="#e76f00" d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858c0 0-118.238 29.53-61.765 94.6" />
-              <path fill="#5382a1" d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471c-12.323-5.36 10.787-12.8 18.056-14.362c7.581-1.644 11.914-1.337 11.914-1.337c-13.705-9.655-88.583 18.957-38.034 27.15c137.853 22.356 251.292-10.066 215.535-26.195M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.03-.89c25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183c29.981-14.492 54.358-12.848 54.358-12.848m112.605 62.942c64.8-33.672 34.839-66.03 13.927-61.67c-5.126 1.066-7.411 1.99-7.411 1.99s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647c0 .001 1.003-.895 1.302-1.697" />
-              <path fill="#e76f00" d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377c-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37" />
-              <path fill="#5382a1" d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64c0 0-4.348 11.158-51.404 20.018c-53.088 9.99-118.564 8.824-157.399 2.421c.001 0 7.95 6.58 48.83 9.201" />
-          </svg>
-            Java
-          </span>
-        </p>
-        <p className="flex flex-wrap gap-2 indent-6">
-          <span className="font-bold">Frontend Development:</span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 228"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#00D8FF"
-                d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621 6.238-30.281 2.16-54.676-11.769-62.708-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848 155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233 50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165 167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266 13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923 168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586 13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488 29.348-9.723 48.443-25.443 48.443-41.52 0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345-3.24-10.257-7.612-21.163-12.963-32.432 5.106-11 9.31-21.767 12.459-31.957 2.619.758 5.16 1.557 7.61 2.4 23.69 8.156 38.14 20.213 38.14 29.504 0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787-1.524 8.219-4.59 13.698-8.382 15.893-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246 12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994 7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863-6.35-5.437-9.555-10.836-9.555-15.216 0-9.322 13.897-21.212 37.076-29.293 2.813-.98 5.757-1.905 8.812-2.773 3.204 10.42 7.406 21.315 12.477 32.332-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789 8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152 7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793 2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433 4.902.192 9.899.29 14.978.29 5.218 0 10.376-.117 15.453-.343-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026 347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815 329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627 310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695 358.489 358.489 0 0 1 11.036 20.54 329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026-.344 1.668-.73 3.367-1.15 5.09-10.622-2.452-22.155-4.275-34.23-5.408-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86-22.86-10.235-22.86-22.86 10.235-22.86 22.86-22.86Z"
-              ></path>
-            </svg>
-            React,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 154"
-              className="h-4 w-4"
-
-            >
-              <defs>
-                <linearGradient
-                  id="astroicon:logos:tailwindcss-icon__a"
-                  x1="-2.778%"
-                  x2="100%"
-                  y1="32%"
-                  y2="67.556%"
-                >
-                  <stop offset="0%" stopColor="#2298BD" />
-                  <stop offset="100%" stopColor="#0ED7B5" />
-                </linearGradient>
-              </defs>
-              <path
-                fill="url(#astroicon:logos:tailwindcss-icon__a)"
-                d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z"
-              ></path>
-            </svg>
-            Tailwind CSS,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 297"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#121212"
-                d="M141.675 0C218.047 0 256 36.35 256 94.414c0 43.43-26.707 71.753-62.785 76.474 30.455 6.137 48.259 23.604 51.54 58.065l.474 6.337.415 5.924.358 5.542.249 4.179.267 4.93.138 2.814.198 4.47.159 4.222.079 2.427.107 3.888.092 4.446.033 2.148.06 6.226.02 6.496v3.885h-78.758l.004-1.62.028-3.147.047-3.065.136-7.424.035-2.489.027-3.902-.004-2.496-.023-2.617-.032-2.054-.064-2.876-.094-3.05-.125-3.242-.16-3.455-.096-1.813-.16-2.833-.186-2.976-.287-4.204-.247-3.342a116.56 116.56 0 0 0-.247-3.02l-.202-1.934c-2.6-22.827-11.655-32.157-27.163-35.269l-1.307-.245a60.184 60.184 0 0 0-2.704-.408l-1.397-.164c-.236-.025-.472-.05-.71-.073l-1.442-.127-1.471-.103-1.502-.081-1.514-.058-1.544-.039-1.574-.018L0 198.74V136.9h127.62c2.086 0 4.108-.04 6.066-.12l1.936-.095 1.893-.122 1.85-.15c.305-.028.608-.056.909-.086l1.785-.193a86.3 86.3 0 0 0 3.442-.475l1.657-.28c20.709-3.755 31.063-14.749 31.063-36.2 0-24.075-16.867-38.666-50.602-38.666H0V0h141.675ZM83.276 250.785c10.333 0 14.657 5.738 16.197 11.23l.203.79.167.782.109.617.046.306.078.603.058.59.023.29.031.569.01.278.008.54v29.507H0v-46.102h83.276Z"
-              ></path>
-            </svg>
-            Remix
-          </span>
-        </p>
-        <p className="flex flex-wrap gap-2 indent-6">
-          <span className="font-bold">Backend Development :</span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="0.89em" height="1em" viewBox="0 0 256 289">
-              <path fill="#539e43" d="M128 288.464c-3.975 0-7.685-1.06-11.13-2.915l-35.247-20.936c-5.3-2.915-2.65-3.975-1.06-4.505c7.155-2.385 8.48-2.915 15.9-7.156c.796-.53 1.856-.265 2.65.265l27.032 16.166c1.06.53 2.385.53 3.18 0l105.74-61.217c1.06-.53 1.59-1.59 1.59-2.915V83.08c0-1.325-.53-2.385-1.59-2.915l-105.74-60.953c-1.06-.53-2.385-.53-3.18 0L20.405 80.166c-1.06.53-1.59 1.855-1.59 2.915v122.17c0 1.06.53 2.385 1.59 2.915l28.887 16.695c15.636 7.95 25.44-1.325 25.44-10.6V93.68c0-1.59 1.326-3.18 3.181-3.18h13.516c1.59 0 3.18 1.325 3.18 3.18v120.58c0 20.936-11.396 33.126-31.272 33.126c-6.095 0-10.865 0-24.38-6.625l-27.827-15.9C4.24 220.885 0 213.465 0 205.515V83.346C0 75.396 4.24 67.976 11.13 64L116.87 2.783c6.625-3.71 15.635-3.71 22.26 0L244.87 64C251.76 67.975 256 75.395 256 83.346v122.17c0 7.95-4.24 15.37-11.13 19.345L139.13 286.08c-3.445 1.59-7.42 2.385-11.13 2.385m32.596-84.009c-46.377 0-55.917-21.2-55.917-39.221c0-1.59 1.325-3.18 3.18-3.18h13.78c1.59 0 2.916 1.06 2.916 2.65c2.12 14.045 8.215 20.936 36.306 20.936c22.261 0 31.802-5.035 31.802-16.96c0-6.891-2.65-11.926-37.367-15.372c-28.886-2.915-46.907-9.275-46.907-32.33c0-21.467 18.02-34.187 48.232-34.187c33.921 0 50.617 11.66 52.737 37.101q0 1.193-.795 2.385c-.53.53-1.325 1.06-2.12 1.06h-13.78c-1.326 0-2.65-1.06-2.916-2.385c-3.18-14.575-11.395-19.345-33.126-19.345c-24.38 0-27.296 8.48-27.296 14.84c0 7.686 3.445 10.07 36.306 14.31c32.597 4.24 47.967 10.336 47.967 33.127c-.265 23.321-19.345 36.571-53.002 36.571" />
-            </svg>
-            NodeJs,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-              <path d="M128 0c70.692 0 128 57.308 128 128s-57.308 128-128 128S0 198.692 0 128S57.308 0 128 0" />
-              <path fill="#fff" d="M123 72.45c17.9 0 33.25 4.95 45.35 14.4c10.184 7.96 17.68 18.9 21.617 31.278l.133.422l.1.3l.1.35l.2.65l.3 1.2l.8 2.8l.85 3.2l3.75 13.7l3.7 13.8l4.2 15.7l6.75 25.25l2.55 9.5l-.55.6c-17.622 19.256-41.713 32.483-68.827 36.288l-.823.112l-.25-1.65l-.45-3.3l-.4-2.4l-.45-3.15l-.6-3.85l-.25-1.5l-.55-3.65l-.35-2.15l-.45-2.8l-.45-2.7l-.45-2.6l-.45-2.55l-.4-2.5l-.45-2.4l-.4-2.3l-.3-1.7l-.35-1.65l-.6-3.15l-.3-1.5l-.35-1.85l-.3-1.3l-.25-1.25l-.25-1.2l-.15-.8l-.35-1.5l-.5-2.2l-.2-.7l-.25-1l-.2-.95l-.25-.95l-.25-.9l-.15-.55l-.25-.85l-.2-.8l-.15-.55l-.2-.5l-.15-.45l-.2-.7l-.15-.5l-.1-.3a33 33 0 0 0-.706-1.886l-.194-.464l-.15-.3l1.15-3l-4.55.15l-1.25.05c-41.3.85-67.95-16.7-67.95-44.2c0-29.15 29-52.6 66.2-52.6m-40.3 137.7c.935-3.2 4.246-5.091 7.45-4.29l.15.04c3.25.837 5.19 4.098 4.485 7.348l-.035.152l-.05.15l-6.05 22.55l-.85-.35a114 114 0 0 1-9.94-4.253l-.81-.397l5.6-20.8zm34.8-15.25c.95-3.25 4.35-5.15 7.65-4.25a6.25 6.25 0 0 1 3.815 2.991l.085.159l.2.9l.3 1.45l.2 1.05l-.05.25l-.15.7v.15l-8.5 31.5l-.05.15a6.25 6.25 0 0 1-12.08-3.098l.03-.152v-.15l8.5-31.5zm-51.6-36.7c3.024 2.64 6.509 5.05 10.322 7.096l.478.254l-7.7 28.6l-.05.15a6.25 6.25 0 0 1-12.084-3.149L56.9 191l.05-.15l8.5-31.5l.05-.2zm-27.9-32c.95-3.2 4.35-5.1 7.65-4.25c3.2.886 5.14 4.148 4.435 7.398l-.035.152v.15l-8.5 31.5l-.05.15a6.25 6.25 0 0 1-12.084-3.149l.034-.151v-.15l8.5-31.5zm190.6-7.15c.95-3.2 4.35-5.1 7.6-4.25c3.25.886 5.19 4.148 4.485 7.35l-.035.15v.2L232.1 154v.15a6.271 6.271 0 0 1-12.139-3.15l.039-.15l.05-.15l8.5-31.5zM27.1 72.75l.217.007q.651.03 1.283.193a6.28 6.28 0 0 1 4.485 7.398l-.035.152l-.05.15l-8.5 31.5l-.05.15c-.95 3.2-4.35 5.1-7.6 4.25a6.2 6.2 0 0 1-3.1-1.9a114.2 114.2 0 0 1 13.033-41.318zm179.95 4.45c1-3.2 4.35-5.1 7.65-4.25c3.2.886 5.188 4.148 4.485 7.398l-.035.152l-.05.15l-8.5 31.5l-.05.15a6.25 6.25 0 0 1-12.084-3.149l.034-.151l.05-.15l8.5-31.5zM56.5 47.25c.95-3.2 4.35-5.1 7.6-4.25c3.25.886 5.19 4.148 4.485 7.35l-.035.15l-.05.2L60 82.2l-.05.15a6.25 6.25 0 0 1-12.084-3.149l.034-.151l.05-.15l8.5-31.5zm109.2 5.95c.95-3.2 4.35-5.1 7.65-4.25c3.2.886 5.14 4.148 4.435 7.398l-.035.152v.15l-6.7 24.75l-.55-.45a70 70 0 0 0-9.935-6.094l-.615-.306l5.7-21.2zm-47.95-39.75a6.2 6.2 0 0 1-.004 2.603l-.046.197l-.05.15l-8.5 31.5l-.05.15a6.25 6.25 0 0 1-12.08-3.098l.03-.152l.05-.15L105 15.3l.85-.15a115 115 0 0 1 11.9-1.7m78.2 21.75l.75.55a116 116 0 0 1 9.222 7.666l.628.584l-.2.65l-.05.15a6.25 6.25 0 0 1-12.08-3.098l.03-.152l.05-.15zM146.5 14.5l.9.15a114 114 0 0 1 10.44 2.267l.86.233l-3.15 11.75l-.05.15a6.25 6.25 0 0 1-12.08-3.098l.03-.152l.05-.15z" />
-              <path d="M131 93.5a8 8 0 1 1 0 16a8 8 0 0 1 0-16" />
-            </svg>
-            Deno,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-              <path fill="#009688" d="M128 0C57.33 0 0 57.33 0 128s57.33 128 128 128s128-57.33 128-128S198.67 0 128 0m-6.67 230.605v-80.288H76.699l64.128-124.922v80.288h42.966z" />
-            </svg>
-            FastApi,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" >
-              <path fill="#6db33f" d="M38.944 35.879c50.58-48.999 131.454-47.682 180.453 3.161c5.532-7.376 10.274-15.542 13.699-23.972c16.07 48.999 25.817 90.095 22.128 121.97c-1.844 26.87-12.381 52.687-29.768 73.235c-45.31 53.741-125.922 60.59-179.663 15.28l-1.028-.915l-.055-.036q-.252-.176-.498-.367q-.735-.573-1.336-1.24l-.144-.164l-1.68-1.493c-1.64-1.405-3.279-2.81-4.733-4.4l-.536-.606c-49-50.58-47.419-131.454 3.16-180.453M57.91 207.376c-4.742-3.688-11.591-3.162-15.28 1.58c-3.242 4.17-3.226 9.969.049 13.815l.052.06l2.033 1.807l.2.136c4.604 3.028 10.8 2.402 14.333-1.878l.194-.241c3.688-4.742 2.898-11.591-1.58-15.28M231.78 28.239c-13.173 27.661-45.84 48.736-74.027 55.322c-26.607 6.322-49.79 1.054-74.289 10.537c-55.848 21.339-54.794 87.724-24.236 102.74l1.844 1.054s22.074-4.389 43.902-10.185l1.87-.5c8.718-2.35 17.295-4.91 24.302-7.492c36.354-13.435 76.397-46.628 89.568-85.09c-6.849 40.042-41.359 78.767-75.87 96.418c-18.44 9.483-32.665 11.59-62.96 22.128c-3.688 1.317-6.586 2.635-6.586 2.635l1.108-.15l.736-.095l.733-.092c6.69-.83 12.702-1.244 12.702-1.244c42.94-2.108 110.38 12.118 141.729-29.768c32.139-42.677 14.225-111.697-.527-156.218" />
-              <path fill="#fff" d="M57.911 207.376c4.479 3.688 5.269 10.537 1.58 15.279c-3.687 4.742-10.537 5.269-15.279 1.58s-5.268-10.537-1.58-15.279s10.537-5.268 15.28-1.58M231.78 28.239c14.752 44.521 32.666 113.541.527 156.218c-31.35 41.886-98.789 27.66-141.729 29.768c0 0-6.012.415-12.702 1.244l-.733.092q-.919.117-1.844.245s2.898-1.318 6.586-2.635c30.295-10.537 44.52-12.645 62.96-22.128c34.511-17.65 69.021-56.376 75.87-96.418c-13.171 38.462-53.214 71.655-89.568 85.09c-25.026 9.22-70.074 18.177-70.074 18.177l-1.844-1.054c-30.558-15.016-31.612-81.401 24.236-102.74c24.5-9.483 47.682-4.215 74.29-10.537c28.187-6.586 60.853-27.66 74.025-55.322" />
-            </svg>
-            Spring
-          </span>
-        </p>
-        <p className="flex flex-wrap gap-2 indent-6">
-          <span className="font-bold">Other Technologies:</span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 185"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#2396ED"
-                d="M250.716 70.497c-5.765-4-18.976-5.5-29.304-3.5-1.2-10-6.725-18.749-16.333-26.499l-5.524-4-3.844 5.75c-4.803 7.5-7.205 18-6.485 28 .24 3.499 1.441 9.749 5.044 15.249-3.362 2-10.328 4.5-19.455 4.5H1.155l-.48 2c-1.682 9.999-1.682 41.248 18.014 65.247 14.892 18.249 36.99 27.499 66.053 27.499 62.93 0 109.528-30.25 131.386-84.997 8.647.25 27.142 0 36.51-18.75.24-.5.72-1.5 2.401-5.249l.961-2-5.284-3.25ZM139.986 0h-26.42v24.999h26.42V0Zm0 29.999h-26.42v24.999h26.42v-25Zm-31.225 0h-26.42v24.999h26.42v-25Zm-31.225 0H51.115v24.999h26.421v-25ZM46.311 59.998H19.89v24.999h26.42v-25Zm31.225 0H51.115v24.999h26.421v-25Zm31.225 0h-26.42v24.999h26.42v-25Zm31.226 0h-26.422v24.999h26.422v-25Zm31.225 0H144.79v24.999h26.422v-25Z"
-              ></path>
-            </svg>
-            Docker,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 256"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#DE4C36"
-                d="M251.172 116.594 139.4 4.828c-6.433-6.437-16.873-6.437-23.314 0l-23.21 23.21 29.443 29.443c6.842-2.312 14.688-.761 20.142 4.693 5.48 5.489 7.02 13.402 4.652 20.266l28.375 28.376c6.865-2.365 14.786-.835 20.269 4.657 7.663 7.66 7.663 20.075 0 27.74-7.665 7.666-20.08 7.666-27.749 0-5.764-5.77-7.188-14.235-4.27-21.336l-26.462-26.462-.003 69.637a19.82 19.82 0 0 1 5.188 3.71c7.663 7.66 7.663 20.076 0 27.747-7.665 7.662-20.086 7.662-27.74 0-7.663-7.671-7.663-20.086 0-27.746a19.654 19.654 0 0 1 6.421-4.281V94.196a19.378 19.378 0 0 1-6.421-4.281c-5.806-5.798-7.202-14.317-4.227-21.446L81.47 39.442 4.83 116.077c-6.44 6.443-6.44 16.884 0 23.322l111.774 111.768c6.435 6.438 16.873 6.438 23.316 0l111.251-111.249c6.438-6.44 6.438-16.887 0-23.324"
-              ></path>
-            </svg>
-            Git,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 24 24"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="currentColor"
-                d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4Z"
-              ></path>
-            </svg>
-            SQL,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 220"
-              className="h-4 w-4"
-
-            >
-              <path
-                fill="#912626"
-                d="M245.97 168.943c-13.662 7.121-84.434 36.22-99.501 44.075-15.067 7.856-23.437 7.78-35.34 2.09-11.902-5.69-87.216-36.112-100.783-42.597C3.566 169.271 0 166.535 0 163.951v-25.876s98.05-21.345 113.879-27.024c15.828-5.679 21.32-5.884 34.79-.95 13.472 4.936 94.018 19.468 107.331 24.344l-.006 25.51c.002 2.558-3.07 5.364-10.024 8.988"
-              ></path>
-              <path
-                fill="#C6302B"
-                d="M245.965 143.22c-13.661 7.118-84.431 36.218-99.498 44.072-15.066 7.857-23.436 7.78-35.338 2.09-11.903-5.686-87.214-36.113-100.78-42.594-13.566-6.485-13.85-10.948-.524-16.166 13.326-5.22 88.224-34.605 104.055-40.284 15.828-5.677 21.319-5.884 34.789-.948 13.471 4.934 83.819 32.935 97.13 37.81 13.316 4.881 13.827 8.9.166 16.02"
-              ></path>
-              <path
-                fill="#912626"
-                d="M245.97 127.074c-13.662 7.122-84.434 36.22-99.501 44.078-15.067 7.853-23.437 7.777-35.34 2.087-11.903-5.687-87.216-36.112-100.783-42.597C3.566 127.402 0 124.67 0 122.085V96.206s98.05-21.344 113.879-27.023c15.828-5.679 21.32-5.885 34.79-.95C162.142 73.168 242.688 87.697 256 92.574l-.006 25.513c.002 2.557-3.07 5.363-10.024 8.987"
-              ></path>
-              <path
-                fill="#C6302B"
-                d="M245.965 101.351c-13.661 7.12-84.431 36.218-99.498 44.075-15.066 7.854-23.436 7.777-35.338 2.087-11.903-5.686-87.214-36.112-100.78-42.594-13.566-6.483-13.85-10.947-.524-16.167C23.151 83.535 98.05 54.148 113.88 48.47c15.828-5.678 21.319-5.884 34.789-.949 13.471 4.934 83.819 32.933 97.13 37.81 13.316 4.88 13.827 8.9.166 16.02"
-              ></path>
-              <path
-                fill="#912626"
-                d="M245.97 83.653c-13.662 7.12-84.434 36.22-99.501 44.078-15.067 7.854-23.437 7.777-35.34 2.087-11.903-5.687-87.216-36.113-100.783-42.595C3.566 83.98 0 81.247 0 78.665v-25.88s98.05-21.343 113.879-27.021c15.828-5.68 21.32-5.884 34.79-.95C162.142 29.749 242.688 44.278 256 49.155l-.006 25.512c.002 2.555-3.07 5.361-10.024 8.986"
-              ></path>
-              <path
-                fill="#C6302B"
-                d="M245.965 57.93c-13.661 7.12-84.431 36.22-99.498 44.074-15.066 7.854-23.436 7.777-35.338 2.09C99.227 98.404 23.915 67.98 10.35 61.497-3.217 55.015-3.5 50.55 9.825 45.331 23.151 40.113 98.05 10.73 113.88 5.05c15.828-5.679 21.319-5.883 34.789-.948 13.471 4.935 83.819 32.934 97.13 37.811 13.316 4.876 13.827 8.897.166 16.017"
-              ></path>
-              <path
-                fill="#FFF"
-                d="m159.283 32.757-22.01 2.285-4.927 11.856-7.958-13.23-25.415-2.284 18.964-6.839-5.69-10.498 17.755 6.944 16.738-5.48-4.524 10.855 17.067 6.391m-28.251 57.518L89.955 73.238l58.86-9.035-17.783 26.072m-56.95-50.928c17.375 0 31.46 5.46 31.46 12.194 0 6.736-14.085 12.195-31.46 12.195s-31.46-5.46-31.46-12.195c0-6.734 14.085-12.194 31.46-12.194"
-              ></path>
-              <path
-                fill="#621B1C"
-                d="m185.295 35.998 34.836 13.766-34.806 13.753-.03-27.52"
-              />
-              <path
-                fill="#9A2928"
-                d="m146.755 51.243 38.54-15.245.03 27.519-3.779 1.478-34.791-13.752"
-              />
-            </svg>
-            REDIS,
-          </span>
-          <span className="flex items-center gap-1 indent-0">
-            <svg
-              viewBox="0 0 256 295"
-              className="h-4 w-4"
-
-            >
-              <defs>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__b"
-                  x1="48.548%"
-                  x2="51.047%"
-                  y1="115.276%"
-                  y2="41.364%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__c"
-                  x1="54.407%"
-                  x2="46.175%"
-                  y1="2.404%"
-                  y2="90.542%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".8" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__d"
-                  x1="51.86%"
-                  x2="47.947%"
-                  y1="88.248%"
-                  y2="9.748%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__e"
-                  x1="49.925%"
-                  x2="49.924%"
-                  y1="85.49%"
-                  y2="13.811%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__f"
-                  x1="53.901%"
-                  x2="45.956%"
-                  y1="3.102%"
-                  y2="93.895%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__g"
-                  x1="45.593%"
-                  x2="54.811%"
-                  y1="5.475%"
-                  y2="93.524%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__h"
-                  x1="49.984%"
-                  x2="49.984%"
-                  y1="89.845%"
-                  y2="40.632%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__i"
-                  x1="53.505%"
-                  x2="42.746%"
-                  y1="99.975%"
-                  y2="23.545%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__j"
-                  x1="49.841%"
-                  x2="50.241%"
-                  y1="13.229%"
-                  y2="94.673%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".8" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__k"
-                  x1="49.927%"
-                  x2="50.727%"
-                  y1="37.327%"
-                  y2="92.782%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__l"
-                  x1="49.876%"
-                  x2="49.876%"
-                  y1="2.299%"
-                  y2="81.204%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__m"
-                  x1="49.833%"
-                  x2="49.824%"
-                  y1="2.272%"
-                  y2="71.799%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__n"
-                  x1="53.467%"
-                  x2="38.949%"
-                  y1="48.921%"
-                  y2="98.1%"
-                >
-                  <stop offset="0%" stopColor="#FFA63F" />
-                  <stop offset="100%" stopColor="#FF0" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__o"
-                  x1="52.373%"
-                  x2="47.579%"
-                  y1="143.009%"
-                  y2="-64.622%"
-                >
-                  <stop offset="0%" stopColor="#FFEED7" />
-                  <stop offset="100%" stopColor="#BDBFC2" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__p"
-                  x1="30.581%"
-                  x2="65.887%"
-                  y1="34.024%"
-                  y2="89.175%"
-                >
-                  <stop offset="0%" stopColor="#FFA63F" />
-                  <stop offset="100%" stopColor="#FF0" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__q"
-                  x1="59.572%"
-                  x2="48.361%"
-                  y1="-17.216%"
-                  y2="66.118%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__r"
-                  x1="47.769%"
-                  x2="51.373%"
-                  y1="1.565%"
-                  y2="104.313%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__s"
-                  x1="43.55%"
-                  x2="57.114%"
-                  y1="4.533%"
-                  y2="92.827%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__t"
-                  x1="49.733%"
-                  x2="50.558%"
-                  y1="17.609%"
-                  y2="99.385%"
-                >
-                  <stop offset="0%" stopColor="#FFA63F" />
-                  <stop offset="100%" stopColor="#FF0" />
-                </linearGradient>
-                <linearGradient
-                  id="astroicon:logos:linux-tux__u"
-                  x1="50.17%"
-                  x2="49.68%"
-                  y1="2.89%"
-                  y2="94.17%"
-                >
-                  <stop offset="0%" stopColor="#FFF" stopOpacity=".65" />
-                  <stop offset="100%" stopColor="#FFF" stopOpacity={0} />
-                </linearGradient>
-                <filter
-                  id="astroicon:logos:linux-tux__a"
-                  width="200%"
-                  height="200%"
-                  x="-50%"
-                  y="-50%"
-                  filterUnits="objectBoundingBox"
-                >
-                  <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
-                  <feGaussianBlur
-                    in="shadowOffsetOuter1"
-                    result="shadowBlurOuter1"
-                    stdDeviation="6.5"
-                  />
-                </filter>
-              </defs>
-              <g fill="none">
-                <path
-                  fill="#000"
-                  fillOpacity=".2"
-                  d="M235.125 249.359c0 17.355-52.617 31.497-117.54 31.497S.044 266.806.044 249.359c0-17.356 52.618-31.498 117.54-31.498 64.924 0 117.45 14.142 117.541 31.498Z"
-                  filter="url(#astroicon:logos:linux-tux__a)"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="#000"
-                  d="M63.213 215.474c-11.387-16.346-13.591-69.606 12.947-102.39C89.292 97.383 92.69 86.455 93.7 71.67c.734-16.805-11.846-66.851 35.537-70.616 48.027-3.857 45.364 43.526 45.088 68.596-.183 21.12 15.52 33.15 26.355 49.68 19.927 30.303 18.274 82.461-3.765 110.745-27.916 35.354-51.791 20.018-67.678 21.304-29.752 1.745-30.762 17.54-66.024-35.905Z"
-                ></path>
-                <path
-                  fill="url(#astroicon:logos:linux-tux__b)"
-                  d="M169.1 122.451c8.265 7.622 29.661 41.69-4.224 62.995-11.937 7.438 10.653 35.721 21.488 22.039 19.193-24.61 6.98-63.913-4.591-77.963-7.714-9.917-19.651-13.774-12.672-7.07Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="#000"
-                  stroke="#000"
-                  strokeWidth=".977"
-                  d="M176.805 117.86c13.59 11.02 38.292 49.587 2.204 74.748-11.846 7.806 10.468 32.508 23.049 19.927 43.618-43.894-1.102-94.308-16.53-111.664-13.774-15.151-25.987 3.49-8.723 16.989Z"
-                ></path>
-                <path
-                  fill="url(#astroicon:logos:linux-tux__c)"
-                  d="M147.245 25.02c-.459 12.581-14.325 23.51-30.946 24.52-16.621 1.01-29.66-8.54-29.202-21.121.46-12.581 14.326-23.509 30.947-24.519 16.62-.918 29.66 8.54 29.201 21.12Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__d)"
-                  d="M107.483 54.957c.46 8.173-3.397 15.06-8.723 15.335-5.326.276-10.01-6.06-10.469-14.233-.459-8.173 3.398-15.06 8.724-15.335 5.326-.276 10.01 6.06 10.468 14.233Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__e)"
-                  d="M117.125 55.6c.184 9.458 6.337 16.988 13.683 16.805 7.346-.184 13.131-7.99 12.948-17.54-.184-9.458-6.336-16.988-13.683-16.804-7.346.183-13.223 8.08-12.948 17.539Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="#000"
-                  d="M133.186 57.712c-.092 5.234 2.48 9.458 5.877 9.458 3.306 0 6.153-4.224 6.245-9.366.091-5.234-2.48-9.459-5.878-9.459-3.397 0-6.152 4.225-6.244 9.367Zm-21.212.092c.459 4.316-1.194 7.989-3.582 8.356-2.387.276-4.683-2.938-5.142-7.254-.46-4.316 1.194-7.99 3.581-8.357 2.388-.275 4.684 2.939 5.143 7.255Z"
-                ></path>
-                <path
-                  fill="url(#astroicon:logos:linux-tux__f)"
-                  d="M124.564 54.773c-.276 2.939 1.102 5.326 3.03 5.51 1.928.184 3.765-2.112 4.04-4.959.276-2.938-1.102-5.326-3.03-5.51-1.928-.183-3.765 2.113-4.04 4.96Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__g)"
-                  d="M99.953 55.508c.276 2.388-.734 4.5-2.203 4.683-1.47.184-2.847-1.653-3.123-4.132-.275-2.388.735-4.5 2.204-4.683 1.47-.184 2.847 1.744 3.122 4.132Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__h)"
-                  d="M71.027 145.684c6.52-14.785 20.386-40.772 20.662-60.883 0-15.978 47.843-19.835 51.7-3.856 3.856 15.978 13.59 39.853 19.834 51.424 6.245 11.478 24.335 48.118 5.051 80.074-17.356 28.284-69.973 50.69-98.073-3.856-9.55-18.917-7.806-42.333.826-62.903Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__i)"
-                  d="M65.15 134.664c-5.601 10.56-17.172 38.293 11.112 53.445 30.395 16.162 30.303 49.312-6.245 33.517-33.425-14.233-18.641-71.902-9.274-85.676 6.06-9.642 15.243-21.488 4.407-1.286Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="#000"
-                  stroke="#000"
-                  strokeWidth="1.25"
-                  d="M79.925 122.727c-8.907 14.509-30.211 48.669-1.652 66.484 38.384 23.6 27.548 47.108-7.53 25.895-49.404-29.568-5.97-89.257 13.774-112.03 22.59-25.529 4.316 4.683-4.592 19.65Z"
-                ></path>
-                <path
-                  fill="url(#astroicon:logos:linux-tux__j)"
-                  d="M156.428 151.285c0 16.162-15.519 37.1-42.15 36.916-27.456.183-39.118-20.754-39.118-36.916 0-16.161 18.182-29.293 40.588-29.293 22.498.092 40.68 13.132 40.68 29.293Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__k)"
-                  d="M141.92 100.504c-.276 16.713-11.204 20.662-24.978 20.662-13.775 0-23.784-2.48-24.978-20.662 0-11.387 11.203-17.998 24.978-17.998 13.774-.092 24.977 6.52 24.977 17.998Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__l)"
-                  d="M58.63 126.216c9-13.682 28.008-34.711 3.582 2.939-19.835 31.038-7.346 50.965-.918 56.474 18.549 16.53 17.814 27.64 3.214 18.917-31.314-18.641-24.794-50.047-5.878-78.33Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__m)"
-                  d="M188.936 131.818c-7.806-16.07-32.6-56.842 1.193-9.459 30.763 42.884 9.183 72.729 5.326 75.667-3.856 2.939-16.804 8.908-13.04-1.469 3.858-10.377 22.958-30.028 6.52-64.74Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__n)"
-                  stroke="#E68C3F"
-                  strokeWidth="6.25"
-                  d="M51.835 258.542c-20.57-10.928-50.414 2.112-39.578-27.457 2.204-6.704-3.214-16.805.275-23.325 4.133-7.989 13.04-6.244 18.366-11.57 5.234-5.51 8.54-15.06 18.366-13.59 9.734 1.468 16.254 13.406 23.049 28.099 5.05 10.468 22.865 25.253 21.672 37.007-1.47 17.998-21.948 21.396-42.15 10.836Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__o)"
-                  d="M201.608 189.119c-3.122 5.877-16.162 15.335-24.886 12.856-8.815-2.388-12.856-15.795-11.111-25.988 1.653-11.386 11.111-12.03 23.05-6.336 12.855 6.336 16.712 11.662 12.947 19.468Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__p)"
-                  stroke="#E68C3F"
-                  strokeWidth="6.251"
-                  d="M194.445 253.49c15.06-18.273 48.578-14.508 25.988-39.577-4.775-5.418-3.306-16.989-9.183-21.947-6.887-6.061-14.509-1.102-21.488-4.224-6.979-3.398-14.325-9.918-22.865-5.327-8.54 4.684-9.459 16.805-10.285 32.783-.735 11.479-11.203 30.671-5.602 41.231 8.081 16.346 29.11 14.142 43.435-2.938Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__q)"
-                  d="M187.925 229.064c23.325-34.435 5.97-34.16.092-36.823-5.877-2.755-12.03-8.173-18.916-4.408-6.888 3.857-7.255 13.775-7.439 26.814-.275 9.367-8.08 25.07-3.397 33.793 5.693 10.193 19.467-4.591 29.66-19.376Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__r)"
-                  d="M47.06 234.023c-34.895-22.59-18.55-30.303-13.315-33.885 6.336-4.591 6.428-13.407 14.233-12.58 7.806.826 12.397 10.468 17.631 22.406 3.857 8.54 17.264 19.927 16.254 29.753-1.285 11.57-19.743 3.948-34.803-5.694Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="#000"
-                  d="M209.588 188.843c-2.755 4.776-13.958 12.306-21.396 10.285-7.622-1.928-11.112-12.672-9.55-20.753 1.377-9.183 9.55-9.642 19.834-5.05 10.928 4.958 14.326 9.182 11.112 15.518Z"
-                ></path>
-                <path
-                  fill="url(#astroicon:logos:linux-tux__s)"
-                  d="M192.058 186.18c-1.745 3.306-9.091 8.54-14.234 7.163-5.142-1.377-7.713-8.815-6.887-14.417.735-6.336 6.244-6.704 13.223-3.581 7.53 3.49 9.918 6.428 7.898 10.835Z"
-                  transform="translate(10)"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__t)"
-                  stroke="#E68C3F"
-                  strokeWidth="3.75"
-                  d="M97.107 66.344c3.673-3.398 12.58-13.774 29.477-2.939 3.122 2.02 5.693 2.204 11.662 4.775 12.03 4.96 6.336 16.897-6.52 20.937-5.51 1.745-10.468 8.449-20.386 7.806-8.54-.46-10.744-6.06-15.978-9.091-9.275-5.234-10.652-12.305-5.602-16.07 5.051-3.765 6.98-5.143 7.347-5.418Z"
-                  transform="translate(10)"
-                />
-                <path
-                  stroke="#E68C3F"
-                  strokeWidth="2.5"
-                  d="M148.43 75.986c-5.05.275-15.979 11.203-27.457 11.203-11.479 0-18.366-10.652-20.11-10.652"
-                />
-                <path
-                  fill="url(#astroicon:logos:linux-tux__u)"
-                  d="M102.8 65.426c1.837-1.653 7.622-6.153 15.244-1.562 1.653.919 3.306 1.929 5.693 3.306 4.867 2.847 2.48 6.98-3.398 9.55-2.663 1.102-7.07 3.49-10.376 3.306-3.673-.367-6.153-2.755-8.54-4.316-4.5-2.938-4.224-5.418-2.112-7.346 1.56-1.47 3.305-2.847 3.49-2.938Z"
-                  transform="translate(10)"
-                />
-              </g>
-            </svg>
-            Linux
-          </span>
-        </p>
-      </section>
-      <section className="space-y-2 p-2">
-        <h2 className="text-2xl font-bold">Work Experience</h2>
-        <div>
-          <p className="flex justify-between font-bold">
-            <span className="w-fit rounded-md bg-gray-300 px-2">
-              Full Stack Developer
-            </span>
-            <span>2020 - Present</span>
-          </p>
-          <p className="flex gap-1">
-            <b>Qynapse</b>
-            <span className="text-neutral-700">
-              // A healthcare technology company specializing in neuroimaging and AI
-            </span>
-          </p>
-          <p className="italic">
-            Qyscore Web App:
-            <ul className="list-disc pl-6">
-              <li> Built a new viewer structure with Cornerstone and React Admin.</li>
-              <li> Integrated Cypress for end-to-end testing.</li>
-              <li> Optimized the cache and memory usage mechanism.</li>
-            </ul>
-            Report:
-            <ul className="list-disc pl-6">
-              <li> Improved PDF generation with Puppeteer and enhanced testing procedures.</li>
-              <li> Reworked the PDF generation process.</li>
-              <li> Implemented internationalization with .pot files.</li>
-            </ul>
-            DIMSE Agent:
-            <ul className="list-disc pl-6">
-              <li> Maintained the DIMSE agent for efficient and secure data ingestion.</li>
-            </ul>
-            Libraries:
-            <ul className="list-disc pl-6">
-              <li> Created a normative library for percentiles and z-scores.</li>
-              <li> Developed microservices for mesh and slice operations.</li>
-            </ul>
-          </p>
-        </div>
-        <div>
-          <p className="flex justify-between font-bold">
-            <span className="w-fit rounded-md bg-gray-300 px-2">
-              Full Stack Developer
-            </span>
-            <span>2017 - 2020</span>
-          </p>
-          <p className="flex gap-1">
-            <b>Alter Solutions</b>
-            <span className="text-neutral-700">
-              // A consulting and IT services company
-            </span>
-          </p>
-          <p className="italic">
-            IRT System X: Central Dashboard promoting research project webservices
-            <ul className="list-disc pl-6">
-              <li> Develop the whole application from scratch.</li>
-            </ul>
-            SFR Altice Group: Brand-new customer service web app
-            <ul className="list-disc pl-6">
-              <li> Refactor the whole custom CRM with new technologies and architecture. </li>
-              <li> Added core feature (Mail/SMS notification, Tray system, ...) .</li>
-            </ul>
-            Thalès: Local web app displaying military data from Excel file
-            <ul className="list-disc pl-6">
-              <li> Create a user-friendly tool for data vizualizing inventory file (.xlsx).</li>
-            </ul>
-            PSA: Online tool to parse automobile file format (.a2l and .hex, .ulp)
-            <ul className="list-disc pl-6">
-              <li> Set up a backend service for parsing efficiently raw data files.</li>
-            </ul>
-          </p>
-        </div>
-      </section>
-      <section className="space-y-1 p-2">
-        <h2 className="text-2xl font-bold">Projects & Rewards</h2>
-        <p className="flex gap-1">
-          <span className="font-bold">LOM</span>
-          <span className="flex">
-            (
-            <a
-              className="underline"
-              href="https://github.com/tmessaoudi/js-canvas-map"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            ) -
-          </span>
-          <span className="italic">Browser strategy game.</span>
-        </p>
-        <p className="flex gap-1">
-          <span className="font-bold">"Entreprise du Futur" Reward</span>
-          <span className="flex">
-            (
+            <span className="font-bold">LOM</span>
+            <span className="flex">
+              (
               <a
                 className="underline"
-              href="https://challengeentreprendre.wp.imt.fr/"
+                href="https://github.com/tmessaoudi/js-canvas-map"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              ) -
+            </span>
+            <span className="italic">Browser strategy game.</span>
+          </p>
+          <p className="flex gap-1">
+            <span className="font-bold">"Entreprise du Futur" Reward</span>
+            <span className="flex">
+              (
+              <a
+                className="underline"
+                href="https://challengeentreprendre.wp.imt.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Site
-            </a>
-            ) -
-          </span>
-          <span className="italic">By Thalès, from Challenge Entreprendre.</span>
-        </p>
-      </section>
-    </div>
-    <Print />
-  </main>
+              </a>
+              ) -
+            </span>
+            <span className="italic">
+              By Thalès, from Challenge Entreprendre.
+            </span>
+          </p>
+        </section>
+      </div>
+      <Print />
+    </main>
+  );
 }

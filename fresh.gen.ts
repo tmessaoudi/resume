@@ -9,7 +9,7 @@ import * as $index from "./routes/index.tsx";
 import * as $resume_english from "./routes/resume/english.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Print from "./islands/Print.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
