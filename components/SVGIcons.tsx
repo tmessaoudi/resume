@@ -7,7 +7,7 @@ export function TypeScriptIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 256"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -28,7 +28,7 @@ export function JavaScriptIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 256"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -125,7 +125,7 @@ export function ReactIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 228"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -141,7 +141,7 @@ export function TailwindcssIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 154"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <defs>
@@ -168,7 +168,7 @@ export function RemixIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 297"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -258,7 +258,7 @@ export function DockerIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 185"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -274,7 +274,7 @@ export function GitIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 256"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -289,7 +289,7 @@ export function SQLIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -304,7 +304,7 @@ export function RedisIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 220"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <path
@@ -358,7 +358,7 @@ export function LinuxIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 256 295"
-      className="h-4 w-4"
+      class="h-4 w-4"
       {...props}
     >
       <defs>
@@ -733,7 +733,7 @@ export function LinuxIcon(props: Props) {
 
 export function MongoIcon(props: Props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="8 5 16 16" className="h-4 w-2" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="8 5 16 16" class="h-4 w-2" {...props}>
       <defs>
         <linearGradient
           id="vscodeIconsFileTypeMongo0"
@@ -802,7 +802,7 @@ export function MongoIcon(props: Props) {
 
 export function WebsiteIcon(props: Props) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" {...props}>
+    <svg viewBox="0 0 24 24" class="h-5 w-5" {...props}>
       <path
         fill="currentColor"
         d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"
@@ -816,7 +816,7 @@ export function GitHubIcon(props: Props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-5 w-5"
+      class="h-5 w-5"
       {...props}
     >
       <path
@@ -830,7 +830,7 @@ export function GitHubIcon(props: Props) {
 
 export function MailIcon(props: Props) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" {...props}>
+    <svg viewBox="0 0 24 24" class="h-5 w-5" {...props}>
       <path
         fill="currentColor"
         d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
@@ -842,7 +842,7 @@ export function MailIcon(props: Props) {
 
 export function KubernetesIcon(props: Props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 128 128" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 128 128" {...props}>
       <path
         fill="#326ce5"
         d="M63.556 1.912a8.51 8.44 0 0 0-3.26.826L15.795 24a8.51 8.44 0 0 0-4.604 5.725L.214 77.485a8.51 8.44 0 0 0 1.155 6.47a8.51 8.44 0 0 0 .484.672l30.8 38.296a8.51 8.44 0 0 0 6.653 3.176l49.394-.012a8.51 8.44 0 0 0 6.653-3.17l30.789-38.301a8.51 8.44 0 0 0 1.645-7.142l-10.996-47.76a8.51 8.44 0 0 0-4.604-5.726L67.682 2.738a8.51 8.44 0 0 0-4.126-.826"
@@ -859,7 +859,7 @@ export function KubernetesIcon(props: Props) {
 
 export function PostgreSQLIcon(props: Props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 128 128" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 128 128" {...props}>
       <path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938c6.191-2.873 9.861-7.668 3.758-6.409c-13.924 2.873-14.881-1.842-14.881-1.842c14.703-21.815 20.849-49.508 15.543-56.287c-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968c-6.301-.104-11.082 1.652-14.709 4.402c0 0-44.683-18.409-42.604 23.151c.442 8.841 12.672 66.898 27.26 49.362c5.332-6.412 10.484-11.834 10.484-11.834c2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497c-3.757 4.199-2.653 4.936-10.166 6.482c-7.602 1.566-3.136 4.355-.221 5.084c3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69c.209 5.214.558 10.079 1.621 12.948s2.317 10.256 12.191 8.14c8.252-1.764 14.561-4.309 15.136-27.985">
       </path>
       <path d="M75.458 125.256c-4.367 0-7.211-1.689-8.938-3.32c-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419c-.038-.935-.064-1.898-.093-2.919c-.021-.747-.047-1.684-.085-2.664a18.8 18.8 0 0 1-4.962 1.568c-3.079.526-6.389.356-9.84-.507c-2.435-.609-4.965-1.871-6.407-3.82c-4.203 3.681-8.212 3.182-10.396 2.453c-3.853-1.285-7.301-4.896-10.542-11.037c-2.309-4.375-4.542-10.075-6.638-16.943c-3.65-11.96-5.969-24.557-6.175-28.693C4.292 23.698 7.777 14.44 15.296 9.129C27.157.751 45.128 5.678 51.68 7.915c4.402-2.653 9.581-3.944 15.433-3.851c3.143.051 6.136.327 8.916.823c2.9-.912 8.628-2.221 15.185-2.139c12.081.144 22.092 4.852 28.949 13.615c4.894 6.252 2.474 19.381.597 26.651c-2.642 10.226-7.271 21.102-12.957 30.57c1.544.011 3.781-.174 6.961-.831c6.274-1.295 8.109 2.069 8.607 3.575c1.995 6.042-6.677 10.608-9.382 11.864c-3.466 1.609-9.117 2.589-13.745 2.377l-.202-.013l-1.216-.107l-.12 1.014l-.116.991c-.311 11.999-2.025 19.598-5.552 24.619c-3.697 5.264-8.835 6.739-13.361 7.709c-1.544.33-2.947.474-4.219.474m-9.19-43.671c2.819 2.256 3.066 6.501 3.287 14.434c.028.99.054 1.927.089 2.802c.106 2.65.355 8.855 1.327 11.477c.137.371.26.747.39 1.146c1.083 3.316 1.626 4.979 6.309 3.978c3.931-.843 5.952-1.599 7.534-3.851c2.299-3.274 3.585-9.86 3.821-19.575l4.783.116l-4.75-.57l.14-1.186c.455-3.91.783-6.734 3.396-8.602c2.097-1.498 4.486-1.353 6.389-1.01c-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965l1.121-1.663c6.457-9.58 11.781-21.354 14.609-32.304c2.906-11.251 2.02-17.226 1.134-18.356c-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194l-1.8.335l-.922-.191c-2.542-.528-5.366-.82-8.393-.869c-4.756-.08-8.593 1.044-11.739 3.431l-2.183 1.655l-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721c-4.656 3.298-6.777 9.76-6.305 19.207c.156 3.119 2.275 14.926 5.771 26.377c4.831 15.825 9.221 21.082 11.054 21.693c.32.108 1.15-.537 1.976-1.529a271 271 0 0 1 10.694-12.07l2.77-2.915l3.349 2.225c1.35.897 2.839 1.406 4.368 1.502l7.987-6.812l-1.157 11.808c-.026.265-.039.626.065 1.296l.348 2.238l-1.51 1.688l-.174.196l4.388 2.025z">
@@ -880,7 +880,7 @@ export function PostgreSQLIcon(props: Props) {
 
 export function SqliteIcon(props: Props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 128 128" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 128 128" {...props}>
       <defs>
         <linearGradient
           id="deviconSqlite0"
@@ -917,10 +917,35 @@ export function SqliteIcon(props: Props) {
 
 export function ZigIcon(props: Props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 32 32" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 32 32" {...props}>
       <path fill="#f9a825" d="M2 8h6v4H2zm8 0h12v4H10zm0 12h12v4H10zm14 0h2v4h-2zM8 20l-3 4H2V12h4v8zm14-8h-6l-6 8h6z">
       </path>
       <path fill="#f9a825" d="M16 20h-6l-6 8m12-16h6l6-8m2 4v16h-4V12h-2l3-4z"></path>
+    </svg>
+  );
+}
+
+export function LinkedinIcon(props: Props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 16 16" {...props}>
+      <path
+        fill="currentColor"
+        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+      >
+      </path>
+    </svg>
+  );
+}
+
+export function BackIcon(props: Props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 1024 1024" {...props}>
+      <path fill="currentColor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64"></path>
+      <path
+        fill="currentColor"
+        d="m237.248 512l265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312z"
+      >
+      </path>
     </svg>
   );
 }

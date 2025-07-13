@@ -5,9 +5,9 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
+import * as $contact from "./routes/contact.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $resume_english from "./routes/resume/english.tsx";
-import * as $Counter from "./islands/Counter.tsx";
+import * as $resume_en from "./routes/resume/en.tsx";
 import * as $Print from "./islands/Print.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -16,11 +16,11 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
+    "./routes/contact.tsx": $contact,
     "./routes/index.tsx": $index,
-    "./routes/resume/english.tsx": $resume_english,
+    "./routes/resume/en.tsx": $resume_en,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
     "./islands/Print.tsx": $Print,
   },
   baseUrl: import.meta.url,
