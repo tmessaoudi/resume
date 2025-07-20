@@ -8,6 +8,7 @@ export function Header() {
     { href: "#about", label: "About Me" },
     { href: "#experiences", label: "Experiences" },
     { href: "#projects", label: "Side Projects" },
+    { href: "/resume/en", label: "Resume" },
     { href: "#contact", label: "Contact" },
   ];
 

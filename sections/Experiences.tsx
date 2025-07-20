@@ -10,10 +10,11 @@ export function Experiences() {
       location: "Remote",
       period: "2020 - Present",
       description:
-        "Led development of scalable web applications using modern JavaScript frameworks. .",
+        "Led full-stack development of a medical imaging platform, with a focus on DICOM, performance, and scalable infrastructure.",
       achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
+        "Rebuilt a neuroimaging web app end-to-end, from React UI to FastAPI backend and Kubernetes pipelines",
+        "Improved api and database request performance by up to 70%",
+        "Rework or created multiple pipeline microservices",
       ],
       technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Docker", "AWS"],
     },
@@ -26,7 +27,7 @@ export function Experiences() {
         "Developed and maintained multiple client projects from conception to deployment. Worked closely with designers and product managers to deliver high-quality solutions.",
       achievements: [
         "Built 5+ production applications from scratch",
-        "Improved database query performance by 50%",
+        
         "Established coding standards and documentation practices",
       ],
       technologies: ["JavaScript", "Vue.js", "Express.js", "MongoDB", "Redis"],

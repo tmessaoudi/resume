@@ -1,34 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx"
-import { Badge } from "../components/Badge.tsx"
-import { WebsiteIcon, GitHubIcon } from "../components/SVGIcons.tsx"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
+import { Badge } from "../components/Badge.tsx";
+import { GitHubIcon, WebsiteIcon } from "../components/SVGIcons.tsx";
 
 export function SideProjects() {
   const projects = [
     {
-      title: "Deno Task Runner",
-      description:
-        "A powerful task automation tool built with Deno and Fresh. Features include task scheduling, dependency management, and real-time monitoring.",
+      title: "Projet 'Of Claim and Kin' ",
+      description: "A persistent strategy/city-builder browser game ",
       image: "/placeholder.svg?height=200&width=400&text=Deno+Task+Runner",
       technologies: ["Deno", "Fresh", "TypeScript", "WebSockets"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com",
-      stars: 124,
-      featured: true,
     },
-    {
-      title: "API Documentation Generator",
-      description:
-        "Automatically generates beautiful API documentation from TypeScript interfaces and JSDoc comments. Supports multiple output formats.",
-      image: "/placeholder.svg?height=200&width=400&text=API+Docs+Generator",
-      technologies: ["TypeScript", "Node.js", "Markdown", "HTML"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      stars: 89,
-      featured: true,
-    }
-  ]
-
-  const featuredProjects = projects.filter((p) => p.featured)
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -40,11 +24,10 @@ export function SideProjects() {
           </p>
         </div>
 
-        {/* Featured Projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8">Featured Projects</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -68,12 +51,13 @@ export function SideProjects() {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <button>
-                      <a href={project.githubUrl} target="_blank">
-                        <GitHubIcon className="h-4 w-4 mr-2" />
-
-                      </a>
-                    </button>
+                    {project.liveUrl && (
+                      <button>
+                        <a href={project.githubUrl} target="_blank">
+                          <GitHubIcon className="h-4 w-4 mr-2" />
+                        </a>
+                      </button>
+                    )}
                     {project.liveUrl && (
                       <button>
                         <a href={project.liveUrl} target="_blank">
@@ -87,7 +71,7 @@ export function SideProjects() {
             ))}
           </div>
         </div>
-        </div>
+      </div>
     </section>
-  )
+  );
 }

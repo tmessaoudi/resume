@@ -1,30 +1,8 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
+import { MailIcon } from "../components/SVGIcons.tsx";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx"
-import { MailIcon } from "../components/SVGIcons.tsx"
-import type { Handlers } from "$fresh/server.ts";
-
-
-
-export const handler: Handlers = {
-  async GET(req, ctx) {
-    return await ctx.render();
-  },
-  async POST(req, ctx) {
-    const form = await req.formData();
-    const email = form.get("email")?.toString();
-
-    // Add email to list.
-    console.log(email)
-    // Redirect user to thank you page.
-    const headers = new Headers();
-    headers.set("location", "/thanks-for-subscribing");
-    return new Response(null, {
-      status: 303, // See Other
-      headers,
-    });
-  },
-};
 export function Contact() {
+  console.log("hey")
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto max-w-4xl">
@@ -75,16 +53,24 @@ export function Contact() {
               <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form method="post" className="space-y-4">
+              <form method="post" action="/api/contact" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name">Name</label>
-                    <input id="name" name="name" value=""  required />
+                    <input
+                      id="name"
+                      type="text"
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      name="name"
+                      value=""
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email">Email</label>
                     <input
                       id="email"
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       name="email"
                       type="email"
                       value=""
@@ -94,19 +80,26 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="subject">Subject</label>
-                  <input id="subject" name="subject" value="" required />
+                  <input
+                    id="subject"
+                    name="subject"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    value=""
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="message">Message</label>
                   <textarea
                     id="message"
                     name="message"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     rows={5}
                     value=""
                     required
                   />
                 </div>
-                <button type="submit" className="w-full">
+                <button type="submit" className="w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                   Send
                 </button>
               </form>
@@ -115,5 +108,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
