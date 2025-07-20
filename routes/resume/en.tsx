@@ -1,6 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
 import {
-BackIcon,
+  BackIcon,
   DenoIcon,
   DockerIcon,
   FastApiIcon,
@@ -9,6 +9,7 @@ BackIcon,
   JavaIcon,
   JavaScriptIcon,
   KubernetesIcon,
+  LinkedinIcon,
   LinuxIcon,
   MailIcon,
   MongoIcon,
@@ -24,20 +25,21 @@ BackIcon,
   TailwindcssIcon,
   TypeScriptIcon,
   WebsiteIcon,
-  LinkedinIcon
 } from "../../components/SVGIcons.tsx";
 import Print from "../../islands/Print.tsx";
 
 export default function Resume(props: PageProps) {
   return (
     <main class="text-sm flex min-h-screen flex-col items-center justify-center gap-2 bg-gray-200 print:min-h-0">
-      <a href="/" type="" className="absolute top-7 left-4 border border-blue-700 rounded-lg"> <BackIcon className="w-10 h-10" /></a>
+      <a href="/" type="" className="absolute top-7 left-4 border border-blue-700 rounded-lg">
+        <BackIcon className="w-10 h-10" />
+      </a>
       <div class="relative m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
         <section class="mb-2 flex items-stretch justify-between border-b border-black p-1">
           <div class="flex flex-col gap-2">
             <div class="flex flex-1 flex-col justify-center gap-2">
               <h1 class="text-4xl font-bold">Tarek Messaoudi</h1>
-              <h2 class="text-xl">Full Stack Developer</h2>
+              <h2 class="text-xl">Full Stack Engineer</h2>
             </div>
             <div class="flex gap-4">
               <a
@@ -79,7 +81,7 @@ export default function Resume(props: PageProps) {
           <h2 class="text-2xl font-bold">Education</h2>
           <div>
             <p class="flex justify-between font-bold">
-              <span class="w-fit rounded-md bg-gray-300 px-2">
+              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
                 IMT Lille-Douai
               </span>
               <span>2012 - 2017</span>
@@ -91,7 +93,7 @@ export default function Resume(props: PageProps) {
               </span>
             </p>
             <p class="italic">
-              Internship at Capgemini, GFI, Alliance Française Limassol, Lille 2 University, Norauto
+              Internships at Capgemini, GFI, Alliance Française Limassol, Lille 2 University, Norauto
             </p>
           </div>
         </section>
@@ -151,7 +153,7 @@ export default function Resume(props: PageProps) {
             </span>
           </p>
           <p class="flex flex-wrap gap-2 indent-6">
-            <span class="font-bold">Database :</span>
+            <span class="font-bold">Databases :</span>
             <span class="flex items-center gap-1 indent-0">
               <PostgreSQLIcon />
               PostgresSQL,
@@ -192,9 +194,9 @@ export default function Resume(props: PageProps) {
         <section class="space-y-2 px-2 py-1">
           <h2 class="text-2xl font-bold">Work Experience</h2>
           <div>
-            <p class="flex justify-between font-bold">
-              <span class="w-fit rounded-md bg-gray-300 px-2">
-                Full Stack Developer
+            <p class="flex justify-between font-extrabold">
+              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
+                Full Stack Engineer
               </span>
               <span>2020 - Present</span>
             </p>
@@ -204,51 +206,45 @@ export default function Resume(props: PageProps) {
                 // A healthcare technology company specializing in neuroimaging and AI
               </span>
             </p>
-            <p class="italic">
-              <span class="flex items-center gap-1 indent-0">
-                Qyscore Web App: <TypeScriptIcon /> / <ReactIcon /> / <TailwindcssIcon /> / <FastApiIcon /> /{" "}
-                <SQLIcon /> / <RedisIcon />
+            <p>
+              <span class="flex items-center justify-between font-medium">
+                🧠 Medical Imaging Web Platform Redesign
+                <span class="flex gap-2">
+                  <TypeScriptIcon /> <ReactIcon /> <TailwindcssIcon /> <FastApiIcon /> <SQLIcon /> <RedisIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
-                <li>
-                  Built a new viewer structure with Cornerstone and React Admin.
-                </li>
-                <li>Integrated Cypress for end-to-end testing.</li>
-                <li>Optimized the cache and memory usage mechanism.</li>
+                <li>Refactored with a new admin panel, interactive data visualizations, and a robust MRI viewer, ...</li>
+                <li>Added features such as segmentation correction, lesion tracking, 3D rendering, oblique views, multi-modality</li>
+                <li>Maintained long-term stability of the viewer through refactors and testing</li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                Report: <PythonIcon /> / <DockerIcon />
+              <span class="flex items-center justify-between font-medium">
+                📝 Reporting System Overhaul <span class="flex gap-2"> <PythonIcon /> <DockerIcon /></span>
               </span>
               <ul class="list-disc pl-6">
-                <li>
-                  Improved PDF generation with Puppeteer and enhanced testing procedures.
-                </li>
-                <li>Reworked the PDF generation process.</li>
-                <li>Implemented internationalization with .pot files.</li>
+                <li>Rebuilt the report generation pipeline using Jinja2 + Puppeteer (HTML → PDF)</li>
+                <li>Redesigned templates for multiple languages and disease-specific variations (e.g., Dementia, MS, ...)</li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                DIMSE Agent: <PythonIcon /> / <DockerIcon />
+              <span class="flex items-center justify-between font-medium">
+                📦 Scalable Infrastructure & Microservices <span class="flex gap-2"><PythonIcon /> <DockerIcon /> <KubernetesIcon /></span>
               </span>
               <ul class="list-disc pl-6">
-                <li>
-                  Maintained the DIMSE agent for efficient and secure data ingestion.
-                </li>
+                <li>Contributed to converting the academic BrainVisa platform into a Kubernetes-based scalable pipeline</li>
+                <li>Maintained and expanded the customer-deployed DIMSE agent, adding routing logic and detailed logging</li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                Libraries: <PythonIcon /> / <DockerIcon />
+              <span class="flex items-center justify-between font-medium">
+                🧬 Domain-Specific Tools <span class="flex gap-2"><PythonIcon />  <DockerIcon /></span>
               </span>
               <ul class="list-disc pl-6">
-                <li>
-                  Created a normative library for percentiles and z-scores.
-                </li>
-                <li>Developed microservices for mesh and slice operations.</li>
+                <li>Built a normative Python library to compute statistical imaging metrics (z-scores, percentiles, asymmetry, ...)</li>
+                <li>Developed a 3D mesh microservice for structural MRI data</li>
               </ul>
             </p>
           </div>
           <div>
-            <p class="flex justify-between font-bold">
-              <span class="w-fit rounded-md bg-gray-300 px-2">
-                Full Stack Developer
+            <p class="flex justify-between font-extrabold">
+              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
+                Full Stack Engineer
               </span>
               <span>2017 - 2020</span>
             </p>
@@ -259,36 +255,45 @@ export default function Resume(props: PageProps) {
               </span>
             </p>
             <p class="italic">
-              <span class="flex items-center gap-1 indent-0">
-                IRT System X: <TypeScriptIcon /> / <ReactIcon /> / <TailwindcssIcon /> / <NodeJsIcon />{" "}
-                Central Dashboard promoting research project webservices
+              <span class="flex items-center justify-between font-medium">
+                🔬 IRT System X : Central Dashboard promoting research project webservices
+                <span class="flex gap-2">
+                  <TypeScriptIcon /> <ReactIcon /> <TailwindcssIcon /> <NodeJsIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
                 <li>Develop the whole application from scratch.</li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                SFR Altice Group: <TypeScriptIcon /> / <ReactIcon /> / <JavaIcon /> / <SpringIcon />{" "}
-                Brand-new customer service web app
+              <span class="flex items-center justify-between font-medium">
+                ☎️ SFR Altice Group: Brand-new customer service web app
+                <span class="flex gap-2">
+                  <TypeScriptIcon /> <ReactIcon /> <JavaIcon /> <SpringIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
                 <li>
                   Refactor the whole custom CRM with new technologies and architecture.
                 </li>
                 <li>
-                  Added core feature (Mail/SMS notification, Tray system, ...) .
+                  Added core features (Mail/SMS notification, Tray system, ...) .
                 </li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                Thalès: <JavaScriptIcon /> / <ReactIcon /> / <JavaIcon />{" "}
-                Local web app displaying military data from Excel file
+              <span class="flex items-center justify-between font-medium">
+                🪖 Thalès: Local web app displaying military data from Excel file
+                <span class="flex gap-2">
+                  <JavaScriptIcon /> <ReactIcon /> <JavaIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
                 <li>
                   Create a user-friendly tool for data vizualizing inventory file (.xlsx).
                 </li>
               </ul>
-              <span class="flex items-center gap-1 indent-0">
-                PSA: <JavaIcon /> / <SpringIcon /> Online tool to parse automobile file format (.a2l and .hex, .ulp)
+              <span class="flex items-center justify-between font-medium">
+                🚙 PSA: Online tool to parse automobile file format (.a2l and .hex, .ulp)
+                <span class="flex gap-2">
+                  <JavaIcon /> <SpringIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
                 <li>
