@@ -1,0 +1,96 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx"
+import { Badge } from "../components/Badge.tsx"
+import { CalendarDays, MapPin } from "lucide-preact"
+
+export function Experiences() {
+  const experiences = [
+    {
+      title: "Senior Full Stack Engineer",
+      company: "Qynapse",
+      location: "Remote",
+      period: "2020 - Present",
+      description:
+        "Led development of scalable web applications using modern JavaScript frameworks. .",
+      achievements: [
+        "Reduced application load time by 40% through optimization",
+        "Implemented CI/CD pipelines reducing deployment time by 60%",
+      ],
+      technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+    },
+    {
+      title: "Full Stack Engineer",
+      company: "Alter Solutions",
+      location: "Paris, FR",
+      period: "2017 - 2020",
+      description:
+        "Developed and maintained multiple client projects from conception to deployment. Worked closely with designers and product managers to deliver high-quality solutions.",
+      achievements: [
+        "Built 5+ production applications from scratch",
+        "Improved database query performance by 50%",
+        "Established coding standards and documentation practices",
+      ],
+      technologies: ["JavaScript", "Vue.js", "Express.js", "MongoDB", "Redis"],
+    }
+  ]
+
+  return (
+    <section id="experiences" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Professional Experience</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            My journey in software development, building solutions and growing with amazing teams.
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="overflow-hidden">
+              <CardHeader>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <CardTitle className="text-xl">{exp.title}</CardTitle>
+                    <CardDescription className="text-lg font-medium text-foreground">{exp.company}</CardDescription>
+                  </div>
+                  <div className="flex flex-col sm:items-end gap-2">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CalendarDays className="h-4 w-4" />
+                      {exp.period}
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <MapPin className="h-4 w-4" />
+                      {exp.location}
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">{exp.description}</p>
+
+                <div className="mb-4">
+                  <h4 className="font-medium mb-2">Key Achievements:</h4>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                    {exp.achievements.map((achievement, achIndex) => (
+                      <li key={achIndex}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-medium mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

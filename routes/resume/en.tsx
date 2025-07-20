@@ -214,29 +214,52 @@ export default function Resume(props: PageProps) {
                 </span>
               </span>
               <ul class="list-disc pl-6">
-                <li>Refactored with a new admin panel, interactive data visualizations, and a robust MRI viewer, ...</li>
-                <li>Added features such as segmentation correction, lesion tracking, 3D rendering, oblique views, multi-modality</li>
+                <li>
+                  Refactored with a new admin panel, interactive data visualizations, and a robust MRI viewer, ...
+                </li>
+                <li>
+                  Added features such as segmentation correction, lesion tracking, 3D rendering, oblique views,
+                  multi-modality
+                </li>
                 <li>Maintained long-term stability of the viewer through refactors and testing</li>
               </ul>
               <span class="flex items-center justify-between font-medium">
-                📝 Reporting System Overhaul <span class="flex gap-2"> <PythonIcon /> <DockerIcon /></span>
+                📝 Reporting System Overhaul{" "}
+                <span class="flex gap-2">
+                  <PythonIcon /> <DockerIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
                 <li>Rebuilt the report generation pipeline using Jinja2 + Puppeteer (HTML → PDF)</li>
-                <li>Redesigned templates for multiple languages and disease-specific variations (e.g., Dementia, MS, ...)</li>
+                <li>
+                  Redesigned templates for multiple languages and disease-specific variations (e.g., Dementia, MS, ...)
+                </li>
               </ul>
               <span class="flex items-center justify-between font-medium">
-                📦 Scalable Infrastructure & Microservices <span class="flex gap-2"><PythonIcon /> <DockerIcon /> <KubernetesIcon /></span>
+                📦 Scalable Infrastructure & Microservices{" "}
+                <span class="flex gap-2">
+                  <PythonIcon /> <DockerIcon /> <KubernetesIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
-                <li>Contributed to converting the academic BrainVisa platform into a Kubernetes-based scalable pipeline</li>
-                <li>Maintained and expanded the customer-deployed DIMSE agent, adding routing logic and detailed logging</li>
+                <li>
+                  Contributed to converting the academic BrainVisa platform into a Kubernetes-based scalable pipeline
+                </li>
+                <li>
+                  Maintained and expanded the customer-deployed DIMSE agent, adding routing logic and detailed logging
+                </li>
               </ul>
               <span class="flex items-center justify-between font-medium">
-                🧬 Domain-Specific Tools <span class="flex gap-2"><PythonIcon />  <DockerIcon /></span>
+                🧬 Domain-Specific Tools{" "}
+                <span class="flex gap-2">
+                  <PythonIcon /> <DockerIcon />
+                </span>
               </span>
               <ul class="list-disc pl-6">
-                <li>Built a normative Python library to compute statistical imaging metrics (z-scores, percentiles, asymmetry, ...)</li>
+                <li>
+                  Built a normative Python library to compute statistical imaging metrics (z-scores, percentiles,
+                  asymmetry, ...)
+                </li>
                 <li>Developed a 3D mesh microservice for structural MRI data</li>
               </ul>
             </p>
@@ -262,7 +285,7 @@ export default function Resume(props: PageProps) {
                 </span>
               </span>
               <ul class="list-disc pl-6">
-                <li>Develop the whole application from scratch.</li>
+                <li>Develop the whole application from scratch</li>
               </ul>
               <span class="flex items-center justify-between font-medium">
                 ☎️ SFR Altice Group: Brand-new customer service web app
@@ -272,10 +295,10 @@ export default function Resume(props: PageProps) {
               </span>
               <ul class="list-disc pl-6">
                 <li>
-                  Refactor the whole custom CRM with new technologies and architecture.
+                  Refactor the whole custom CRM with new technologies and architecture
                 </li>
                 <li>
-                  Added core features (Mail/SMS notification, Tray system, ...) .
+                  Added core features (Mail/SMS notification, Tray system, ...)
                 </li>
               </ul>
               <span class="flex items-center justify-between font-medium">
@@ -286,7 +309,7 @@ export default function Resume(props: PageProps) {
               </span>
               <ul class="list-disc pl-6">
                 <li>
-                  Create a user-friendly tool for data vizualizing inventory file (.xlsx).
+                  Create a user-friendly tool for data vizualizing inventory file (.xlsx)
                 </li>
               </ul>
               <span class="flex items-center justify-between font-medium">
@@ -297,7 +320,7 @@ export default function Resume(props: PageProps) {
               </span>
               <ul class="list-disc pl-6">
                 <li>
-                  Set up a backend service for parsing efficiently raw data files.
+                  Set up a backend service for parsing efficiently raw data files
                 </li>
               </ul>
             </p>
@@ -319,7 +342,7 @@ export default function Resume(props: PageProps) {
               </a>
               ) -
             </span>
-            <span class="italic">Browser strategy game.</span>
+            <span class="italic">Browser strategy game</span>
           </p>
           <p class="flex gap-1">
             <span class="font-bold">"Entreprise du Futur" Reward</span>
@@ -336,7 +359,7 @@ export default function Resume(props: PageProps) {
               ) -
             </span>
             <span class="italic">
-              By Thalès, from Challenge Entreprendre.
+              By Thalès, from Challenge Entreprendre
             </span>
           </p>
         </section>
