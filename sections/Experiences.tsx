@@ -1,6 +1,27 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx"
-import { Badge } from "../components/Badge.tsx"
-import { CalendarDays, MapPin } from "lucide-preact"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/Card.tsx";
+import { Badge } from "../components/Badge.tsx";
+import { CalendarDays, MapPin } from "lucide-preact";
+import {
+  DockerIcon,
+  FastApiIcon,
+  KubernetesIcon,
+  PostgreSQLIcon,
+  PythonIcon,
+  ReactIcon,
+  RedisIcon,
+  TailwindcssIcon,
+  TypeScriptIcon,
+  JavaIcon,
+  SpringIcon,
+  NodeJsIcon,
+  MongoIcon
+} from "../components/SVGIcons.tsx";
 
 export function Experiences() {
   const experiences = [
@@ -16,7 +37,17 @@ export function Experiences() {
         "Improved api and database request performance by up to 70%",
         "Rework or created multiple pipeline microservices",
       ],
-      technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+      technologies: [
+        { icon: <TypeScriptIcon />, label: "Typescript" },
+        { icon: <ReactIcon />, label: "React" },
+        { icon: <TailwindcssIcon />, label: "Tailwindcss" },
+        { icon: <PythonIcon />, label: "Python" },
+        { icon: <FastApiIcon />, label: "FastAPI" },
+        { icon: <PostgreSQLIcon />, label: "PostgreSQL" },
+        { icon: <RedisIcon />, label: "Redis" },
+        { icon: <KubernetesIcon />, label: "Kubernetes" },
+        { icon: <DockerIcon />, label: "Docker" },
+      ],
     },
     {
       title: "Full Stack Engineer",
@@ -24,23 +55,37 @@ export function Experiences() {
       location: "Paris, FR",
       period: "2017 - 2020",
       description:
-        "Developed and maintained multiple client projects from conception to deployment. Worked closely with designers and product managers to deliver high-quality solutions.",
+        "Developed multiple client projects from conception to deployment.",
       achievements: [
         "Built 5+ production applications from scratch",
-        
-        "Established coding standards and documentation practices",
+        "Rework a central CRM with microservices",
       ],
-      technologies: ["JavaScript", "Vue.js", "Express.js", "MongoDB", "Redis"],
-    }
-  ]
+      technologies: [
+        { icon: <TypeScriptIcon />, label: "Typescript" },
+        { icon: <ReactIcon />, label: "React" },
+        { icon: <TailwindcssIcon />, label: "Tailwindcss" },
+        { icon: <NodeJsIcon />, label: "NodeJs" },
+        { icon: <JavaIcon />, label: "Java" },
+        { icon: <SpringIcon />, label: "Spring" },
+        { icon: <PostgreSQLIcon />, label: "PostgreSQL" },
+        { icon: <MongoIcon />, label: "Mongo" },
+      ],
+    },
+  ];
 
   return (
-    <section id="experiences" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+    <section
+      id="experiences"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Professional Experience</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Professional Experience
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My journey in software development, building solutions and growing with amazing teams.
+            My journey in software development, building solutions and growing
+            with amazing teams.
           </p>
         </div>
 
@@ -51,7 +96,9 @@ export function Experiences() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-xl">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-medium text-foreground">{exp.company}</CardDescription>
+                    <CardDescription className="text-lg font-medium text-foreground">
+                      {exp.company}
+                    </CardDescription>
                   </div>
                   <div className="flex flex-col sm:items-end gap-2">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -82,7 +129,7 @@ export function Experiences() {
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <Badge key={techIndex} variant="outline">
-                        {tech}
+                        {tech.icon} {tech.label}
                       </Badge>
                     ))}
                   </div>
@@ -93,5 +140,5 @@ export function Experiences() {
         </div>
       </div>
     </section>
-  )
+  );
 }

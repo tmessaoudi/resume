@@ -210,7 +210,7 @@ export default function Resume(props: PageProps) {
               <span class="flex items-center justify-between font-medium">
                 🧠 Medical Imaging Web Platform Redesign
                 <span class="flex gap-2">
-                  <TypeScriptIcon /> <ReactIcon /> <TailwindcssIcon /> <FastApiIcon /> <SQLIcon /> <RedisIcon />
+                  <TypeScriptIcon /> <ReactIcon /> <TailwindcssIcon /> <PythonIcon /> <FastApiIcon /> <PostgreSQLIcon /> <RedisIcon />
                 </span>
               </span>
               <ul class="list-disc pl-6">
