@@ -1,16 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
 import { Badge } from "../components/Badge.tsx";
-import { GitHubIcon, WebsiteIcon } from "../components/SVGIcons.tsx";
+import { DenoIcon, GitHubIcon, ReactIcon, SqliteIcon, TypeScriptIcon, WebsiteIcon, ZigIcon } from "../components/SVGIcons.tsx";
 
 export function SideProjects() {
   const projects = [
     {
-      title: "Projet 'Of Claim and Kin' ",
+      title: "Projet 'LOM'",
       description: "A persistent strategy/city-builder browser game ",
       image: "/placeholder.svg?height=200&width=400&text=Deno+Task+Runner",
-      technologies: ["Deno", "Fresh", "TypeScript", "WebSockets"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      technologies: [
+        { icon: <TypeScriptIcon />, label: "Typescript" },
+        { icon: <ReactIcon />, label: "React" },
+        { icon: <DenoIcon />, label: "Deno" },
+        { icon: <SqliteIcon />, label: "SQLite" },
+      ],
+      githubUrl: "https://github.com/tmessaoudi/deno-lom",
+    },
+    {
+      title: "Project 'KIB'",
+      description: "A 2D total-war like multiplayer game",
+      image: "/placeholder.svg?height=200&width=400&text=Deno+Task+Runner",
+      technologies: [{ icon: <ZigIcon />, label: "Zig" }],
     },
   ];
 
@@ -26,7 +36,7 @@ export function SideProjects() {
 
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8">Featured Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative h-48 overflow-hidden">
@@ -44,14 +54,14 @@ export function SideProjects() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary">
-                        {tech}
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech.label} variant="outline">
+                        {tech.icon} {tech.label}
                       </Badge>
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    {project.liveUrl && (
+                    {project.githubUrl && (
                       <button>
                         <a href={project.githubUrl} target="_blank">
                           <GitHubIcon className="h-4 w-4 mr-2" />

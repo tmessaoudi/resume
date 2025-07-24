@@ -127,8 +127,8 @@ export function Experiences() {
                 <div>
                   <h4 className="font-medium mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline">
+                    {exp.technologies.map((tech) => (
+                      <Badge key={tech.label} variant="outline">
                         {tech.icon} {tech.label}
                       </Badge>
                     ))}

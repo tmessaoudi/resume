@@ -2,7 +2,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { MailIcon } from "../components/SVGIcons.tsx";
 
 export function Contact() {
-  console.log("hey")
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto max-w-4xl">
@@ -24,13 +23,13 @@ export function Contact() {
 
             <div className="space-y-6">
               <Card>
-                <CardContent className="flex items-center space-x-4 pt-6">
-                  <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                <CardContent className="flex items-center space-x-4">
+                  <a href="mailto:tarek@messaoudi.dev" className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center border">
                     <MailIcon className="h-6 w-6 text-blue-500" />
-                  </div>
+                  </a>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">tmessaoudi94@google.com</p>
+                    <a href="mailto:tarek@messaoudi.dev" className="underline text-blue-700">tarek@messaoudi.dev</a>
                   </div>
                 </CardContent>
               </Card>

@@ -61,14 +61,14 @@ export default function Resume(props: PageProps) {
                 github.com/tmessaoudi
               </a>
               <a
-                href="mailto:tmessaoudi94@gmail.com"
+                href="mailto:tarek@messaoudi.dev"
                 class="flex items-center gap-1"
               >
                 <MailIcon />
-                tmessaoudi94@gmail.com
+                tarek@messaoudi.dev
               </a>
               <a
-                href="https://www.linkedin.com/in/tmessaoudi/"
+                href="https://www.linkedin.com/in/tmessaoudi"
                 class="flex items-center gap-1"
               >
                 <LinkedinIcon />

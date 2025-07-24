@@ -11,7 +11,7 @@ export async function sendMail(name: string | undefined, email: string | undefin
     },
     body: JSON.stringify({
       from: "onboarding@resend.dev",
-      to: "tmessaoudi94@gmail.com",
+      to: "tarek@messaoudi.dev",
       subject: `Contact email from tarek.messaoudi.dev :  ${name}`,
       html: `<p><strong>Email:</strong> ${email}</p><p>${message}</p>`,
     }),

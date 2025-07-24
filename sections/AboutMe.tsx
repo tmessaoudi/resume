@@ -46,7 +46,7 @@ export function AboutMe() {
 
             <div className="flex gap-4 mb-8">
               <a title="Github" href="https://github.com/tmessaoudi" ><GitHubIcon class="w-8 h-8" /></a>
-              <a title="Mail" href="mailto:tmessaoudi94@gmail.com" ><MailIcon class="w-8 h-8" /></a>
+              <a title="Mail" href="tarek@messaoudi.dev" ><MailIcon class="w-8 h-8" /></a>
               <a title="Linkedin" href="https://www.linkedin.com/in/tmessaoudi/" ><LinkedinIcon class="pt-0.5 w-8 h-8" /></a>
               <a title="Curriculum Vitae" href="/resume/en" ><ResumeIcon class="pt-0.5 w-8 h-8" /></a>
             </div>
