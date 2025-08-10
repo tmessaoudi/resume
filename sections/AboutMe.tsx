@@ -1,27 +1,26 @@
 import { Card, CardContent } from "../components/Card.tsx";
 import {
   DenoIcon,
+  DockerIcon,
+  FastApiIcon,
   FreshIcon,
   GitHubIcon,
+  GitIcon,
+  KubernetesIcon,
   LinkedinIcon,
   MailIcon,
-  PostgreSQLIcon,
   NodeJsIcon,
+  PostgreSQLIcon,
   PythonIcon,
   ReactIcon,
   RedisIcon,
+  ResumeIcon,
   SqliteIcon,
   TypeScriptIcon,
-  FastApiIcon,
-  GitIcon, 
-  KubernetesIcon,
-  DockerIcon,
   ZigIcon,
-  ResumeIcon
 } from "../components/SVGIcons.tsx";
 
 export function AboutMe() {
-
   return (
     <section id="about" className="min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
@@ -45,10 +44,18 @@ export function AboutMe() {
             </p>
 
             <div className="flex gap-4 mb-8">
-              <a title="Github" href="https://github.com/tmessaoudi" ><GitHubIcon class="w-8 h-8" /></a>
-              <a title="Mail" href="tarek@messaoudi.dev" ><MailIcon class="w-8 h-8" /></a>
-              <a title="Linkedin" href="https://www.linkedin.com/in/tmessaoudi/" ><LinkedinIcon class="pt-0.5 w-8 h-8" /></a>
-              <a title="Curriculum Vitae" href="/resume/en" ><ResumeIcon class="pt-0.5 w-8 h-8" /></a>
+              <a title="Github" href="https://github.com/tmessaoudi">
+                <GitHubIcon class="w-8 h-8" />
+              </a>
+              <a title="Mail" href="tarek@messaoudi.dev">
+                <MailIcon class="w-8 h-8" />
+              </a>
+              <a title="Linkedin" href="https://www.linkedin.com/in/tmessaoudi/">
+                <LinkedinIcon class="pt-0.5 w-8 h-8" />
+              </a>
+              <a title="Curriculum Vitae" href="/resume/en">
+                <ResumeIcon class="pt-0.5 w-8 h-8" />
+              </a>
             </div>
           </div>
 
@@ -67,9 +74,8 @@ export function AboutMe() {
                 <SqliteIcon /> Sqlite
                 <RedisIcon /> Redis
                 <KubernetesIcon /> Kubernetes
-                <DockerIcon/> Docker
+                <DockerIcon /> Docker
                 <GitIcon /> Git
-
               </div>
               <div className="space-y-4">
                 <div>

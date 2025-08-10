@@ -1,26 +1,20 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../components/Card.tsx";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
 import { Badge } from "../components/Badge.tsx";
 import { CalendarDays, MapPin } from "lucide-preact";
 import {
   DockerIcon,
   FastApiIcon,
+  JavaIcon,
   KubernetesIcon,
+  MongoIcon,
+  NodeJsIcon,
   PostgreSQLIcon,
   PythonIcon,
   ReactIcon,
   RedisIcon,
+  SpringIcon,
   TailwindcssIcon,
   TypeScriptIcon,
-  JavaIcon,
-  SpringIcon,
-  NodeJsIcon,
-  MongoIcon
 } from "../components/SVGIcons.tsx";
 
 export function Experiences() {
@@ -54,8 +48,7 @@ export function Experiences() {
       company: "Alter Solutions",
       location: "Paris, FR",
       period: "2017 - 2020",
-      description:
-        "Developed multiple client projects from conception to deployment.",
+      description: "Developed multiple client projects from conception to deployment.",
       achievements: [
         "Built 5+ production applications from scratch",
         "Rework a central CRM with microservices",
@@ -84,8 +77,7 @@ export function Experiences() {
             Professional Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My journey in software development, building solutions and growing
-            with amazing teams.
+            My journey in software development, building solutions and growing with amazing teams.
           </p>
         </div>
 
@@ -118,9 +110,7 @@ export function Experiences() {
                 <div className="mb-4">
                   <h4 className="font-medium mb-2">Key Achievements:</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                    {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex}>{achievement}</li>
-                    ))}
+                    {exp.achievements.map((achievement, achIndex) => <li key={achIndex}>{achievement}</li>)}
                   </ul>
                 </div>
 

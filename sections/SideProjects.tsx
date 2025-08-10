@@ -1,6 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
 import { Badge } from "../components/Badge.tsx";
-import { DenoIcon, GitHubIcon, ReactIcon, SqliteIcon, TypeScriptIcon, WebsiteIcon, ZigIcon } from "../components/SVGIcons.tsx";
+import {
+  DenoIcon,
+  GitHubIcon,
+  ReactIcon,
+  SqliteIcon,
+  TypeScriptIcon,
+  WebsiteIcon,
+  ZigIcon,
+} from "../components/SVGIcons.tsx";
 
 export function SideProjects() {
   const projects = [

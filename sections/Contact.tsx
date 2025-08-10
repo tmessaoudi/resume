@@ -24,7 +24,10 @@ export function Contact() {
             <div className="space-y-6">
               <Card>
                 <CardContent className="flex items-center space-x-4">
-                  <a href="mailto:tarek@messaoudi.dev" className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center border">
+                  <a
+                    href="mailto:tarek@messaoudi.dev"
+                    className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center border"
+                  >
                     <MailIcon className="h-6 w-6 text-blue-500" />
                   </a>
                   <div>
@@ -98,7 +101,10 @@ export function Contact() {
                     required
                   />
                 </div>
-                <button type="submit" className="w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <button
+                  type="submit"
+                  className="w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
                   Send
                 </button>
               </form>
