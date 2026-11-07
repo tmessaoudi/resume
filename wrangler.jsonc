@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/wrangler@4.151.3/config-schema.json",
-  "name": "tmessaoudi-resume",
+  "name": "resume",
   "main": "worker.ts",
   "compatibility_date": "2026-10-01",
   "assets": {
