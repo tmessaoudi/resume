@@ -1,4 +1,3 @@
-import { Slot } from "radix-ui";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "./Card.tsx";
 import type { JSX } from "preact";
@@ -24,16 +23,10 @@ const badgeVariants = cva(
 function Badge({
   className,
   variant,
-  asChild = false,
   ...props
-}:
-  & JSX.HTMLAttributes<HTMLSpanElement>
-  & VariantProps<typeof badgeVariants>
-  & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "span";
-
+}: JSX.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof badgeVariants>) {
   return (
-    <Comp
+    <span
       data-slot="badge"
       className={cn(badgeVariants({ variant }), className)}
       {...props}

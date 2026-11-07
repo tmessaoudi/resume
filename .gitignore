@@ -14,3 +14,8 @@
 _fresh/
 # npm dependencies
 node_modules/
+
+# Cloudflare static export and wrangler state
+dist/
+.wrangler/
+.dev.vars

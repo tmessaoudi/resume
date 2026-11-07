@@ -7,11 +7,14 @@
     "start": "deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
+    "export": "deno task build && deno run -A scripts/export.ts",
+    "cf:dev": "deno task export && pnpm dlx wrangler@4.151.3 dev",
+    "deploy": "deno task export && pnpm dlx wrangler@4.151.3 deploy",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "fmt": { "lineWidth": 120 },
-  "exclude": ["**/_fresh/*"],
+  "exclude": ["**/_fresh/*", "dist/", ".wrangler/"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "class-variance-authority": "npm:class-variance-authority@^0.7.1",
@@ -21,7 +24,6 @@
     "preact/": "https://esm.sh/preact@10.22.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-    "radix-ui": "npm:radix-ui@^1.4.2",
     "tailwind-merge": "npm:tailwind-merge@^3.3.1",
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
