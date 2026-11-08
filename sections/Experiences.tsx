@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
 import { Badge } from "../components/Badge.tsx";
-import { CalendarDays, MapPin } from "lucide-preact";
+import { CalendarDays, MapPin } from "../components/LucideIcons.ts";
 import {
   DockerIcon,
   FastApiIcon,

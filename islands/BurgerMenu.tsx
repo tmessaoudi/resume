@@ -1,6 +1,6 @@
 import { useSignal } from "@preact/signals";
-import { Menu, X } from "lucide-preact";
-import { navItems } from "../sections/Header.tsx"
+import { Menu, X } from "../components/LucideIcons.ts";
+import { navItems } from "../sections/Header.tsx";
 
 export function BurgerMenu() {
   const isMenuOpen = useSignal(false);

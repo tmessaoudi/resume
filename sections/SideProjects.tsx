@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/Card.tsx";
+import type { JSX } from "preact";
 import { Badge } from "../components/Badge.tsx";
 import {
   DenoIcon,
@@ -10,8 +11,16 @@ import {
   ZigIcon,
 } from "../components/SVGIcons.tsx";
 
+type Project = {
+  title: string;
+  description: string;
+  technologies: { icon: JSX.Element; label: string }[];
+  githubUrl?: string;
+  liveUrl?: string;
+};
+
 export function SideProjects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Project 'LOM'",
       description: "A persistent strategy/city-builder browser game ",
@@ -61,18 +70,14 @@ export function SideProjects() {
                   </div>
                   <div className="flex gap-2">
                     {project.githubUrl && (
-                      <button>
-                        <a href={project.githubUrl} target="_blank">
-                          <GitHubIcon className="h-4 w-4 mr-2" />
-                        </a>
-                      </button>
+                      <a href={project.githubUrl} target="_blank">
+                        <GitHubIcon className="h-4 w-4 mr-2" />
+                      </a>
                     )}
                     {project.liveUrl && (
-                      <button>
-                        <a href={project.liveUrl} target="_blank">
-                          <WebsiteIcon className="h-4 w-4 mr-2" />
-                        </a>
-                      </button>
+                      <a href={project.liveUrl} target="_blank">
+                        <WebsiteIcon className="h-4 w-4 mr-2" />
+                      </a>
                     )}
                   </div>
                 </CardContent>
