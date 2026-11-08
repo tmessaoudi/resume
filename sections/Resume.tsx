@@ -116,6 +116,23 @@ const JOBS: Job[] = [
         ],
       },
       {
+        title: { en: "🏥 RIS/PACS Integration", fr: "🏥 Intégration RIS/PACS" },
+        icons: [PythonIcon, FastApiIcon, ReactIcon],
+        bullets: [
+          {
+            en:
+              "Imported RIS orders as planned exams via DICOM Modality Worklist, with patient data carried into DICOM files",
+            fr:
+              "Demandes RIS converties en examens planifiés via DICOM Modality Worklist, données patient dans les DICOM",
+          },
+          {
+            en: "Sent series to a PACS via C-STORE with per-series retry; added patient search and data erasure",
+            fr:
+              "Envoi des séries vers un PACS en C-STORE avec relance par série ; recherche patient, effacement des données",
+          },
+        ],
+      },
+      {
         title: { en: "🔐 Access Control & Quality", fr: "🔐 Contrôle d'accès et qualité" },
         icons: [PythonIcon, FastApiIcon, PostgreSQLIcon],
         bullets: [
