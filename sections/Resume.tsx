@@ -84,7 +84,7 @@ const JOBS: Job[] = [
     company: "Chipiron",
     blurb: {
       en: "// Medtech building an ultra-low-field MRI scanner for breast imaging",
-      fr: "// Medtech développant un scanner IRM à ultra-bas champ pour l'imagerie mammaire",
+      fr: "// Medtech : IRM à ultra-bas champ dédiée au sein",
     },
     projects: [
       {
@@ -153,8 +153,8 @@ const JOBS: Job[] = [
     period: { en: "2020 - 2025", fr: "2020 - 2025" },
     company: "Qynapse",
     blurb: {
-      en: "// A healthcare technology company specializing in neuroimaging and AI",
-      fr: "// Entreprise de technologies de santé spécialisée en neuro-imagerie et IA",
+      en: "// Healthcare technology company in neuroimaging and AI",
+      fr: "// Technologies de santé, neuro-imagerie et IA",
     },
     projects: [
       {
@@ -300,7 +300,7 @@ export function Resume({ lang }: { lang: Lang }) {
           <div class="flex flex-col gap-2">
             <div class="flex flex-1 flex-col justify-center gap-2">
               <h1 class="text-3xl font-bold">Tarek Messaoudi</h1>
-              <h2 class="text-xl">{LABELS.headline[lang]}</h2>
+              <h2 class="text-2xl font-semibold">{LABELS.headline[lang]}</h2>
             </div>
             <div class="flex gap-4">
               <a
@@ -336,13 +336,13 @@ export function Resume({ lang }: { lang: Lang }) {
           <h2 class="text-xl font-bold">{LABELS.work[lang]}</h2>
           {JOBS.map((job) => (
             <div key={job.company}>
-              <p class="flex justify-between font-extrabold">
-                <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">{job.role[lang]}</span>
-                <span>{job.period[lang]}</span>
-              </p>
-              <p class="flex gap-1">
-                <b>{job.company}</b>
-                <span class="text-neutral-700">{job.blurb[lang]}</span>
+              <p class="flex items-center justify-between">
+                <span class="flex items-center gap-1">
+                  <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2 font-extrabold">{job.company}</span>
+                  <b>{job.role[lang]}</b>
+                  <span class="text-neutral-700">{job.blurb[lang]}</span>
+                </span>
+                <span class="shrink-0 font-extrabold">{job.period[lang]}</span>
               </p>
               {job.projects?.map((project) => (
                 <div key={project.title.en} class="mt-1">
