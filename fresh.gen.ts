@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $api_contact from "./routes/api/contact.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $resume_en from "./routes/resume/en.tsx";
+import * as $resume_fr from "./routes/resume/fr.tsx";
 import * as $BurgerMenu from "./islands/BurgerMenu.tsx";
 import * as $Print from "./islands/Print.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -20,6 +21,7 @@ const manifest = {
     "./routes/api/contact.tsx": $api_contact,
     "./routes/index.tsx": $index,
     "./routes/resume/en.tsx": $resume_en,
+    "./routes/resume/fr.tsx": $resume_fr,
   },
   islands: {
     "./islands/BurgerMenu.tsx": $BurgerMenu,

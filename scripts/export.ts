@@ -9,6 +9,7 @@ const OUT = "dist";
 const PAGES: Record<string, string> = {
   "/": "index.html",
   "/resume/en": "resume/en.html",
+  "/resume/fr": "resume/fr.html",
   "/__export_404__": "404.html",
 };
 

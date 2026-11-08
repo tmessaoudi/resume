@@ -20,6 +20,22 @@ import {
   ZigIcon,
 } from "../components/SVGIcons.tsx";
 
+const technologies = [
+  { icon: <TypeScriptIcon />, label: "Typescript" },
+  { icon: <ReactIcon />, label: "React" },
+  { icon: <DenoIcon />, label: "Deno" },
+  { icon: <FreshIcon />, label: "Fresh" },
+  { icon: <PythonIcon />, label: "Python" },
+  { icon: <FastApiIcon />, label: "Fastapi" },
+  { icon: <NodeJsIcon />, label: "Node" },
+  { icon: <PostgreSQLIcon />, label: "PostgreSQL" },
+  { icon: <SqliteIcon />, label: "Sqlite" },
+  { icon: <RedisIcon />, label: "Redis" },
+  { icon: <KubernetesIcon />, label: "Kubernetes" },
+  { icon: <DockerIcon />, label: "Docker" },
+  { icon: <GitIcon />, label: "Git" },
+];
+
 export function AboutMe() {
   return (
     <section id="about" className="min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
@@ -32,11 +48,14 @@ export function AboutMe() {
                 Tarek Messaoudi
               </span>
             </h1>
-            <h2 className="text-xl sm:text-2xl text-muted-foreground mb-6">Full Stack Developer & Problem Solver</h2>
+            <h2 className="text-xl sm:text-2xl text-muted-foreground mb-6">
+              Full Stack Engineer specializing in medical imaging software
+            </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I’m based in France, but comfortable working remotely. I’m driven by solving tough problems whether it’s
-              squeezing out extra performance in a data-heavy application or designing solutions for uncommon issues
-              that don’t fit the usual patterns.
+              I’m based in France, and comfortable working remotely. For the past six years I’ve built medical imaging
+              software: DICOM pipelines, MRI viewers and an operator application for an MRI scanner. I’m driven by tough
+              problems, whether it’s squeezing out extra performance in a data-heavy application or designing solutions
+              for uncommon issues that don’t fit the usual patterns.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               I’ve tackled challenges across diverse industries like automotive, telecom, research labs, voucher
@@ -62,26 +81,20 @@ export function AboutMe() {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">Technologies I Work With</h3>
-              <div className="flex flex-wrap gap-2 mb-6 text-sm">
-                <TypeScriptIcon /> Typescript
-                <ReactIcon /> React
-                <DenoIcon /> Deno
-                <FreshIcon /> Fresh
-                <PythonIcon /> Python
-                <FastApiIcon /> Fastapi
-                <NodeJsIcon /> Node
-                <PostgreSQLIcon /> PostgreSQL
-                <SqliteIcon /> Sqlite
-                <RedisIcon /> Redis
-                <KubernetesIcon /> Kubernetes
-                <DockerIcon /> Docker
-                <GitIcon /> Git
+              <div className="flex flex-wrap gap-x-3 gap-y-2 mb-6 text-sm">
+                {technologies.map(({ icon, label }) => (
+                  <span key={label} className="inline-flex items-center gap-1">
+                    {icon} {label}
+                  </span>
+                ))}
               </div>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium mb-2">Currently Learning</h4>
-                  <p className="text-sm text-muted-foreground flex">
-                    Exploring more low-level language like zig <ZigIcon class="mx-2 h-5 w-5" />, HTTP streaming, ...
+                  <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-x-1">
+                    <span>Exploring low-level languages like</span>
+                    <ZigIcon class="h-5 w-5" />
+                    <span>Zig, HTTP streaming, ...</span>
                   </p>
                 </div>
                 <div>

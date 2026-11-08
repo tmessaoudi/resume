@@ -42,7 +42,7 @@ export function SideProjects() {
 
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8">Featured Projects</h3>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardHeader>

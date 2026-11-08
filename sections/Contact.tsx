@@ -6,10 +6,10 @@ export function Contact() {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Let's Talk</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just
-            want to chat about technology, feel free to reach out!
+            Whether you have a question about medical imaging or just want to chat about technology, feel free to reach
+            out!
           </p>
         </div>
 
@@ -17,8 +17,7 @@ export function Contact() {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
             <p className="text-muted-foreground mb-8">
-              I'm currently open to freelance opportunities, full-time positions, and interesting collaborations. Let's
-              discuss how we can work together to bring your ideas to life.
+              I'm currently at Chipiron, but always happy to talk about medical imaging or hard technical problems.
             </p>
 
             <div className="space-y-6">
@@ -39,12 +38,11 @@ export function Contact() {
             </div>
 
             <div className="mt-8">
-              <h4 className="font-medium mb-4">What I'm Looking For:</h4>
+              <h4 className="font-medium mb-4">What I Enjoy Working On:</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Interesting technical challenges</li>
-                <li>• Collaborative team environments</li>
-                <li>• Projects using modern web technologies</li>
-                <li>• Opportunities to learn and grow</li>
+                <li>• Medical imaging and healthcare software</li>
+                <li>• Hard performance and data-heavy problems</li>
+                <li>• Small teams with real ownership of the product</li>
               </ul>
             </div>
           </div>
