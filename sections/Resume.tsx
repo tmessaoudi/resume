@@ -78,7 +78,7 @@ const PRINT = {
 
 const JOBS: Job[] = [
   {
-    role: { en: "Senior Software Engineer", fr: "Ingénieur logiciel senior" },
+    role: { en: "Software Engineer, Medical Imaging", fr: "Ingénieur logiciel, imagerie médicale" },
     period: { en: "2026 - Present", fr: "2026 - Aujourd'hui" },
     company: "Chipiron",
     blurb: { en: "// An MRI scanner company", fr: "// Entreprise de scanners IRM" },
@@ -131,7 +131,7 @@ const JOBS: Job[] = [
     ],
   },
   {
-    role: { en: "Senior Full Stack Engineer", fr: "Ingénieur Full Stack Senior" },
+    role: { en: "Full Stack Engineer, Medical Imaging", fr: "Ingénieur Full Stack, imagerie médicale" },
     period: { en: "2020 - 2025", fr: "2020 - 2025" },
     company: "Qynapse",
     blurb: {
@@ -212,7 +212,7 @@ const JOBS: Job[] = [
     ],
   },
   {
-    role: { en: "Junior Full Stack Engineer", fr: "Ingénieur Full Stack Junior" },
+    role: { en: "Full Stack Engineer", fr: "Ingénieur Full Stack" },
     period: { en: "2017 - 2020", fr: "2017 - 2020" },
     company: "Alter Solutions",
     blurb: {
