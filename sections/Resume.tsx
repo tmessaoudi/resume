@@ -1,4 +1,4 @@
-import { type ComponentChildren, type ComponentType, Fragment } from "preact";
+import { type ComponentChildren, type ComponentType } from "preact";
 import {
   BackIcon,
   DenoIcon,
@@ -16,6 +16,7 @@ import {
   NodeJsIcon,
   PostgreSQLIcon,
   PythonIcon,
+  RabbitMQIcon,
   ReactIcon,
   RedisIcon,
   RemixIcon,
@@ -49,8 +50,8 @@ const LABELS = {
   projects: { en: "Projects & Rewards", fr: "Projets et distinctions" },
   degree: { en: "Software engineer major", fr: "Cursus ingénieur logiciel" },
   semester: {
-    en: "// with a foreign semester in South Korea at Chungnam National Univ.",
-    fr: "// avec un semestre en Corée du Sud à l'Université nationale de Chungnam",
+    en: "// incl. a semester at Chungnam National Univ., South Korea",
+    fr: "// dont un semestre à l'Univ. de Chungnam, Corée du Sud",
   },
   lom: { en: "Browser strategy game", fr: "Jeu de stratégie sur navigateur" },
   reward: { en: '"Entreprise du Futur" Reward', fr: "Prix « Entreprise du Futur »" },
@@ -78,24 +79,23 @@ const PRINT = {
 
 const JOBS: Job[] = [
   {
-    role: { en: "Software Engineer, Medical Imaging", fr: "Ingénieur logiciel, imagerie médicale" },
+    role: { en: "Software Engineer", fr: "Ingénieur logiciel" },
     period: { en: "2026 - Present", fr: "2026 - Aujourd'hui" },
     company: "Chipiron",
-    blurb: { en: "// An MRI scanner company", fr: "// Entreprise de scanners IRM" },
+    blurb: {
+      en: "// Medtech building an ultra-low-field MRI scanner for breast imaging",
+      fr: "// Medtech développant un scanner IRM à ultra-bas champ pour l'imagerie mammaire",
+    },
     projects: [
       {
         title: { en: "🖥️ MRI Operator Web Application", fr: "🖥️ Application web opérateur pour IRM" },
         icons: [TypeScriptIcon, ReactIcon, TailwindcssIcon],
         bullets: [
           {
-            en: "Built the app from the first commit as its main developer, shipping 14 feature releases in six months",
+            en:
+              "Built the app from scratch, including the exam workflow: drag-and-drop protocols, live scan progress, abort",
             fr:
-              "Application créée dès le premier commit, en développeur principal : 14 versions fonctionnelles en six mois",
-          },
-          {
-            en: "Designed the exam workflow: drag-and-drop protocols, step-based execution, live scan progress, abort",
-            fr:
-              "Conception du parcours d'examen : protocoles en glisser-déposer, exécution par étapes, suivi en direct, arrêt",
+              "Application créée de zéro, avec le parcours d'examen : protocoles en glisser-déposer, suivi en direct, arrêt",
           },
           {
             en: "Built a JSON Schema-driven form engine for acquisition parameters, with server-side field validation",
@@ -106,11 +106,12 @@ const JOBS: Job[] = [
       },
       {
         title: { en: "🩻 DICOM Imaging Integration", fr: "🩻 Intégration de l'imagerie DICOM" },
-        icons: [PythonIcon, ReactIcon, DockerIcon],
+        icons: [PythonIcon, ReactIcon, DockerIcon, RabbitMQIcon],
         bullets: [
           {
-            en: "Connected Orthanc PACS storage, an authenticated DICOMweb proxy and a Cornerstone.js viewer",
-            fr: "Stockage dans un PACS Orthanc, proxy DICOMweb authentifié et visualiseur Cornerstone.js",
+            en:
+              "Connected Orthanc PACS storage, a reverse proxy with authenticated DICOMweb and a Cornerstone.js viewer",
+            fr: "Stockage dans un PACS Orthanc, reverse proxy avec DICOMweb authentifié et visualiseur Cornerstone.js",
           },
         ],
       },
@@ -131,7 +132,7 @@ const JOBS: Job[] = [
     ],
   },
   {
-    role: { en: "Full Stack Engineer, Medical Imaging", fr: "Ingénieur Full Stack, imagerie médicale" },
+    role: { en: "Full Stack Engineer", fr: "Ingénieur Full Stack" },
     period: { en: "2020 - 2025", fr: "2020 - 2025" },
     company: "Qynapse",
     blurb: {
@@ -155,19 +156,15 @@ const JOBS: Job[] = [
         ],
         bullets: [
           {
-            en: "Refactored with a new admin panel, interactive data visualizations, and a robust MRI viewer, ...",
+            en:
+              "Refactored the MRI viewer and admin panel, adding segmentation correction, lesion tracking and 3D rendering",
             fr:
-              "Nouveau panneau d'administration, visualisations de données interactives et visualiseur IRM robuste, ...",
-          },
-          {
-            en: "Added segmentation correction, lesion tracking, 3D rendering, oblique views and multi-modality",
-            fr:
-              "Ajout de la correction de segmentation, du suivi de lésions, du rendu 3D, des vues obliques et du multimodal",
+              "Refonte du visualiseur IRM et de l'administration : correction de segmentation, suivi de lésions, rendu 3D",
           },
         ],
       },
       {
-        title: { en: "📝 Reporting System Overhaul", fr: "📝 Refonte du système de rapports" },
+        title: { en: "🧬 Reporting & Domain Tools", fr: "🧬 Rapports et outils métier" },
         icons: [PythonIcon, DockerIcon],
         bullets: [
           {
@@ -175,6 +172,11 @@ const JOBS: Job[] = [
               "Rebuilt the report pipeline (Jinja2 + Puppeteer) with templates per language and disease (Dementia, MS, ...)",
             fr:
               "Pipeline de rapports refait (Jinja2 + Puppeteer) avec des modèles par langue et pathologie (démence, SEP, ...)",
+          },
+          {
+            en: "Built a normative Python library for imaging metrics and a 3D mesh microservice for structural MRI",
+            fr:
+              "Bibliothèque Python normative de métriques d'imagerie et microservice de maillage 3D pour l'IRM structurelle",
           },
         ],
       },
@@ -190,22 +192,10 @@ const JOBS: Job[] = [
             fr: "Participation à la conversion de la plateforme académique BrainVisa en pipeline Kubernetes scalable",
           },
           {
-            en: "Expanded the customer-deployed DIMSE agent with routing logic and detailed logging",
-            fr: "Évolution de l'agent DIMSE déployé chez les clients : logique de routage et journalisation détaillée",
-          },
-        ],
-      },
-      {
-        title: { en: "🧬 Domain-Specific Tools", fr: "🧬 Outils métier" },
-        icons: [PythonIcon, DockerIcon],
-        bullets: [
-          {
-            en: "Built a normative Python library for imaging metrics (z-scores, percentiles, asymmetry, ...)",
-            fr: "Bibliothèque Python normative pour les métriques d'imagerie (z-scores, percentiles, asymétrie, ...)",
-          },
-          {
-            en: "Developed a 3D mesh microservice for structural MRI data",
-            fr: "Microservice de maillage 3D pour les données d'IRM structurelle",
+            en:
+              "Expanded the customer-deployed DIMSE agent with routing logic and detailed logging; built an HL7 v2 client",
+            fr:
+              "Évolution de l'agent DIMSE déployé chez les clients (routage, journalisation détaillée) ; client HL7 v2",
           },
         ],
       },
@@ -266,7 +256,7 @@ const SKILLS: { label: Text; items: [Icon, string][] }[] = [
     items: [[DockerIcon, "Docker"], [KubernetesIcon, "Kubernetes"], [GitIcon, "Git"], [
       LinuxIcon,
       "Linux",
-    ]],
+    ], [RabbitMQIcon, "RabbitMQ"]],
   },
 ];
 
@@ -325,7 +315,7 @@ export function Resume({ lang }: { lang: Lang }) {
             </div>
           </div>
         </section>
-        <section class="space-y-2 px-2 py-1">
+        <section class="space-y-4 px-2 py-1">
           <h2 class="text-xl font-bold">{LABELS.work[lang]}</h2>
           {JOBS.map((job) => (
             <div key={job.company}>
@@ -338,7 +328,7 @@ export function Resume({ lang }: { lang: Lang }) {
                 <span class="text-neutral-700">{job.blurb[lang]}</span>
               </p>
               {job.projects?.map((project) => (
-                <Fragment key={project.title.en}>
+                <div key={project.title.en} class="mt-1">
                   <span class="flex items-center justify-between font-medium">
                     {project.title[lang]}
                     <span class="flex gap-2">
@@ -346,7 +336,7 @@ export function Resume({ lang }: { lang: Lang }) {
                     </span>
                   </span>
                   <Bullets items={project.bullets} lang={lang} />
-                </Fragment>
+                </div>
               ))}
               {job.bullets && <Bullets items={job.bullets} lang={lang} />}
             </div>
@@ -369,16 +359,14 @@ export function Resume({ lang }: { lang: Lang }) {
         </section>
         <section class="space-y-1 px-2 py-1">
           <h2 class="text-xl font-bold">{LABELS.education[lang]}</h2>
-          <div>
-            <p class="flex justify-between font-bold">
-              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">IMT Lille-Douai</span>
-              <span>2012 - 2017</span>
-            </p>
-            <p class="flex gap-1">
+          <p class="flex items-center justify-between">
+            <span class="flex items-center gap-1">
+              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2 font-bold">IMT Lille-Douai</span>
               <b>{LABELS.degree[lang]}</b>
               <span class="text-neutral-700">{LABELS.semester[lang]}</span>
-            </p>
-          </div>
+            </span>
+            <span class="font-bold">2012 - 2017</span>
+          </p>
         </section>
         <section class="space-y-1 px-2 py-1">
           <h2 class="text-xl font-bold">{LABELS.projects[lang]}</h2>
