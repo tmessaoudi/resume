@@ -33,6 +33,7 @@ export type Lang = "en" | "fr";
 type Text = Record<Lang, string>;
 // deno-lint-ignore no-explicit-any
 type Icon = ComponentType<any>;
+type Bullet = Text & { icon?: Icon };
 type Project = { title: Text; icons: Icon[]; bullets: Text[] };
 type Job = {
   role: Text;
@@ -40,7 +41,7 @@ type Job = {
   company: string;
   blurb: Text;
   projects?: Project[];
-  bullets?: Text[];
+  bullets?: Bullet[];
 };
 
 const LABELS = {
@@ -239,14 +240,17 @@ const JOBS: Job[] = [
       {
         en: "SFR Altice: refactored the customer-service CRM with a new architecture and Mail/SMS notifications",
         fr: "SFR Altice : refonte du CRM du service client, nouvelle architecture et notifications e-mail/SMS",
+        icon: JavaIcon,
       },
       {
         en: "Thalès: built a local web app to visualize military inventory data from Excel files",
         fr: "Thalès : application web locale de visualisation de données militaires d'inventaire issues d'Excel",
+        icon: JavaIcon,
       },
       {
         en: "PSA: built a backend service to parse raw automotive files (.a2l, .hex, .ulp)",
         fr: "PSA : service back-end d'analyse de fichiers automobiles bruts (.a2l, .hex, .ulp)",
+        icon: JavaIcon,
       },
     ],
   },
@@ -289,8 +293,23 @@ const SKILLS: { label: Text; items: [Icon, string][] }[] = [
   },
 ];
 
-function Bullets({ items, lang }: { items: Text[]; lang: Lang }) {
-  return <ul class="list-disc pl-6">{items.map((item) => <li key={item.en}>{item[lang]}</li>)}</ul>;
+function Bullets({ items, lang }: { items: Bullet[]; lang: Lang }) {
+  return (
+    <ul class="list-disc pl-6">
+      {items.map(({ icon: BulletIcon, ...item }) => (
+        <li key={item.en}>
+          {BulletIcon
+            ? (
+              <span class="flex items-center justify-between">
+                {item[lang]}
+                <BulletIcon />
+              </span>
+            )
+            : item[lang]}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 function ExternalLink({ href, children }: { href: string; children: ComponentChildren }) {
