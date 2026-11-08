@@ -20,10 +20,37 @@ import {
 export function Experiences() {
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "Chipiron",
+      location: "Remote",
+      period: "2026 - Present",
+      description:
+        "Building the operator web application for an MRI scanner, from exam workflow to medical image viewing.",
+      achievements: [
+        "Built the MRI operator application from the first commit as its main developer, shipping 14 feature releases in six months",
+        "Designed the full exam workflow: drag-and-drop protocols, step-based execution, live scan progress and in-app abort",
+        "Built a JSON Schema-driven form engine for acquisition parameters, with field-level server validation",
+        "Integrated imaging end to end: DICOM storage in an Orthanc PACS, an authenticated DICOMweb proxy and a multi-series Cornerstone.js viewer",
+        "Implemented authentication and role-based access control in a FastAPI service",
+        "Introduced automated front-end testing (Vitest, MSW, Playwright) and API types generated from OpenAPI",
+      ],
+      technologies: [
+        { icon: <TypeScriptIcon />, label: "Typescript" },
+        { icon: <ReactIcon />, label: "React" },
+        { icon: <TailwindcssIcon />, label: "Tailwindcss" },
+        { icon: <PythonIcon />, label: "Python" },
+        { icon: <FastApiIcon />, label: "FastAPI" },
+        { icon: <PostgreSQLIcon />, label: "PostgreSQL" },
+        { icon: <DockerIcon />, label: "Docker" },
+        { label: "DICOM" },
+        { label: "RabbitMQ" },
+      ],
+    },
+    {
       title: "Senior Full Stack Engineer",
       company: "Qynapse",
       location: "Remote",
-      period: "2020 - Present",
+      period: "2020 - 2025",
       description:
         "Led full-stack development of a medical imaging platform, with a focus on DICOM, performance, and scalable infrastructure.",
       achievements: [

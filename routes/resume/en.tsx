@@ -34,7 +34,7 @@ export default function Resume(props: PageProps) {
       <a href="/" type="" className="absolute top-7 left-4 border border-blue-700 rounded-lg">
         <BackIcon className="w-10 h-10" />
       </a>
-      <div class="relative m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
+      <div class="relative m-4 min-h-[297mm] w-[210mm] rounded-md bg-white px-8 py-4 shadow-lg print:m-0 print:min-h-0 print:w-full print:rounded-none print:shadow-none">
         <section class="mb-2 flex items-stretch justify-between border-b border-black p-1">
           <div class="flex flex-col gap-2">
             <div class="flex flex-1 flex-col justify-center gap-2">
@@ -196,9 +196,63 @@ export default function Resume(props: PageProps) {
           <div>
             <p class="flex justify-between font-extrabold">
               <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
+                Software Engineer
+              </span>
+              <span>2026 - Present</span>
+            </p>
+            <p class="flex gap-1">
+              <b>Chipiron</b>
+              <span class="text-neutral-700">
+                // An MRI scanner company
+              </span>
+            </p>
+            <p>
+              <span class="flex items-center justify-between font-medium">
+                🖥️ MRI Operator Web Application
+                <span class="flex gap-2">
+                  <TypeScriptIcon /> <ReactIcon /> <TailwindcssIcon />
+                </span>
+              </span>
+              <ul class="list-disc pl-6">
+                <li>
+                  Built the app from the first commit as its main developer, shipping 14 feature releases in six months
+                </li>
+                <li>
+                  Designed the exam workflow: drag-and-drop protocols, step-based execution, live scan progress, abort
+                </li>
+                <li>
+                  Built a JSON Schema-driven form engine for acquisition parameters, with server-side field validation
+                </li>
+              </ul>
+              <span class="flex items-center justify-between font-medium">
+                🩻 DICOM Imaging Integration
+                <span class="flex gap-2">
+                  <PythonIcon /> <ReactIcon /> <DockerIcon />
+                </span>
+              </span>
+              <ul class="list-disc pl-6">
+                <li>Connected Orthanc PACS storage, an authenticated DICOMweb proxy and a Cornerstone.js viewer</li>
+              </ul>
+              <span class="flex items-center justify-between font-medium">
+                🔐 Access Control & Quality
+                <span class="flex gap-2">
+                  <PythonIcon /> <FastApiIcon /> <PostgreSQLIcon />
+                </span>
+              </span>
+              <ul class="list-disc pl-6">
+                <li>Implemented authentication and role-based access control in a FastAPI service</li>
+                <li>
+                  Introduced front-end testing from scratch (Vitest, MSW, Playwright) and OpenAPI-generated API types
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <p class="flex justify-between font-extrabold">
+              <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
                 Full Stack Engineer
               </span>
-              <span>2020 - Present</span>
+              <span>2020 - 2025</span>
             </p>
             <p class="flex gap-1">
               <b>Qynapse</b>
@@ -266,7 +320,7 @@ export default function Resume(props: PageProps) {
               </ul>
             </p>
           </div>
-          <div>
+          <div class="break-inside-avoid">
             <p class="flex justify-between font-extrabold">
               <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2">
                 Full Stack Engineer
@@ -367,6 +421,7 @@ export default function Resume(props: PageProps) {
         </section>
       </div>
       <Print />
+      <style>{"@page { size: A4; margin: 8mm 0; }"}</style>
     </main>
   );
 }
