@@ -78,7 +78,7 @@ const PRINT = {
 
 const JOBS: Job[] = [
   {
-    role: { en: "Software Engineer", fr: "Ingénieur logiciel" },
+    role: { en: "Senior Software Engineer", fr: "Ingénieur logiciel senior" },
     period: { en: "2026 - Present", fr: "2026 - Aujourd'hui" },
     company: "Chipiron",
     blurb: { en: "// An MRI scanner company", fr: "// Entreprise de scanners IRM" },
@@ -212,7 +212,7 @@ const JOBS: Job[] = [
     ],
   },
   {
-    role: { en: "Full Stack Engineer", fr: "Ingénieur Full Stack" },
+    role: { en: "Junior Full Stack Engineer", fr: "Ingénieur Full Stack Junior" },
     period: { en: "2017 - 2020", fr: "2017 - 2020" },
     company: "Alter Solutions",
     blurb: {

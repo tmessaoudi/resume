@@ -20,7 +20,7 @@ import {
 export function Experiences() {
   const experiences = [
     {
-      title: "Software Engineer",
+      title: "Senior Software Engineer",
       company: "Chipiron",
       location: "Remote",
       period: "2026 - Present",
@@ -71,7 +71,7 @@ export function Experiences() {
       ],
     },
     {
-      title: "Full Stack Engineer",
+      title: "Junior Full Stack Engineer",
       company: "Alter Solutions",
       location: "Paris, FR",
       period: "2017 - 2020",
