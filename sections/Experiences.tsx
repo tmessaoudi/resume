@@ -56,7 +56,7 @@ export function Experiences() {
       achievements: [
         "Rebuilt a neuroimaging web app end-to-end, from React UI to FastAPI backend and Kubernetes pipelines",
         "Improved api and database request performance by up to 70%",
-        "Rework or created multiple pipeline microservices",
+        "Reworked or created multiple pipeline microservices",
       ],
       technologies: [
         { icon: <TypeScriptIcon />, label: "Typescript" },
@@ -78,7 +78,7 @@ export function Experiences() {
       description: "Developed multiple client projects from conception to deployment.",
       achievements: [
         "Built 5+ production applications from scratch",
-        "Rework a central CRM with microservices",
+        "Reworked a central CRM with microservices",
       ],
       technologies: [
         { icon: <TypeScriptIcon />, label: "Typescript" },

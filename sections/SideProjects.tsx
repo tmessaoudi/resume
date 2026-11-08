@@ -13,21 +13,19 @@ import {
 export function SideProjects() {
   const projects = [
     {
-      title: "Projet 'LOM'",
+      title: "Project 'LOM'",
       description: "A persistent strategy/city-builder browser game ",
-      image: "/placeholder.svg?height=200&width=400&text=Deno+Task+Runner",
       technologies: [
         { icon: <TypeScriptIcon />, label: "Typescript" },
         { icon: <ReactIcon />, label: "React" },
         { icon: <DenoIcon />, label: "Deno" },
         { icon: <SqliteIcon />, label: "SQLite" },
       ],
-      githubUrl: "https://github.com/tmessaoudi/deno-lom",
+      githubUrl: "https://github.com/tmessaoudi/lom-legacy",
     },
     {
       title: "Project 'KIB'",
       description: "A 2D total-war like multiplayer game",
-      image: "/placeholder.svg?height=200&width=400&text=Deno+Task+Runner",
       technologies: [{ icon: <ZigIcon />, label: "Zig" }],
     },
   ];
@@ -47,13 +45,6 @@ export function SideProjects() {
           <div className="grid grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="object-cover transition-transform hover:scale-105"
-                  />
-                </div>
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-xl">{project.title}</CardTitle>
