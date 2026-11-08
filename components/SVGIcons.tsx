@@ -84,8 +84,8 @@ export function JavaIcon(props: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="0.74em"
-      height="1em"
+      width="0.93em"
+      height="1.25em"
       viewBox="0 0 256 346"
       {...props}
     >

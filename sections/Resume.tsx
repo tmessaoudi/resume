@@ -363,35 +363,37 @@ export function Resume({ lang }: { lang: Lang }) {
             </div>
           </div>
         </section>
-        <section class="space-y-4 px-2 py-1">
-          <h2 class="text-xl font-bold">{LABELS.work[lang]}</h2>
-          {JOBS.map((job) => (
-            <div key={job.company}>
-              <p class="flex items-center justify-between">
-                <span class="flex items-center gap-1">
-                  <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2 font-extrabold">{job.company}</span>
-                  <b>{job.role[lang]}</b>
-                  <span class="text-neutral-700">{job.blurb[lang]}</span>
-                </span>
-                <span class="shrink-0 font-extrabold">{job.period[lang]}</span>
-              </p>
-              {job.projects?.map((project) => (
-                <div key={project.title.en} class="mt-1">
-                  <span class="flex items-center justify-between font-semibold">
-                    {project.title[lang]}
-                    <span class="flex gap-2">
-                      {project.icons.map((ProjectIcon, index) => <ProjectIcon key={index} />)}
-                    </span>
-                  </span>
-                  <Bullets items={project.bullets} lang={lang} />
-                </div>
-              ))}
-              {job.bullets && <Bullets items={job.bullets} lang={lang} />}
-            </div>
-          ))}
-        </section>
         <section class="px-2 py-1">
-          <h2 class="text-xl font-bold">{LABELS.skills[lang]}</h2>
+          <h2 class="mb-1 text-xl font-bold">{LABELS.work[lang]}</h2>
+          <div class="space-y-4">
+            {JOBS.map((job) => (
+              <div key={job.company}>
+                <p class="flex items-center justify-between">
+                  <span class="flex items-center gap-1">
+                    <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2 font-extrabold">{job.company}</span>
+                    <b>{job.role[lang]}</b>
+                    <span class="text-neutral-700">{job.blurb[lang]}</span>
+                  </span>
+                  <span class="shrink-0 font-extrabold">{job.period[lang]}</span>
+                </p>
+                {job.projects?.map((project) => (
+                  <div key={project.title.en} class="mt-1">
+                    <span class="flex items-center justify-between font-semibold">
+                      {project.title[lang]}
+                      <span class="flex gap-2">
+                        {project.icons.map((ProjectIcon, index) => <ProjectIcon key={index} />)}
+                      </span>
+                    </span>
+                    <Bullets items={project.bullets} lang={lang} />
+                  </div>
+                ))}
+                {job.bullets && <Bullets items={job.bullets} lang={lang} />}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section class="mt-1 px-2 py-1">
+          <h2 class="mb-1 text-xl font-bold">{LABELS.skills[lang]}</h2>
           {SKILLS.map((group) => (
             <p key={group.label.en} class="flex flex-wrap gap-2 indent-6">
               <span class="font-bold">{group.label[lang]}</span>
@@ -405,8 +407,8 @@ export function Resume({ lang }: { lang: Lang }) {
             </p>
           ))}
         </section>
-        <section class="space-y-1 px-2 py-1">
-          <h2 class="text-xl font-bold">{LABELS.education[lang]}</h2>
+        <section class="mt-1 space-y-1 px-2 py-1">
+          <h2 class="mb-1 text-xl font-bold">{LABELS.education[lang]}</h2>
           <p class="flex items-center justify-between">
             <span class="flex items-center gap-1">
               <span class="w-fit rounded-lg bg-gray-300 px-2 pt-1 mb-1 -ml-2 font-bold">IMT Lille-Douai</span>
@@ -416,8 +418,8 @@ export function Resume({ lang }: { lang: Lang }) {
             <span class="font-bold">2012 - 2017</span>
           </p>
         </section>
-        <section class="space-y-1 px-2 py-1">
-          <h2 class="text-xl font-bold">{LABELS.projects[lang]}</h2>
+        <section class="mt-1 space-y-1 px-2 py-1">
+          <h2 class="mb-1 text-xl font-bold">{LABELS.projects[lang]}</h2>
           <p class="flex gap-1">
             <span class="font-bold">LOM</span>
             <span class="flex">
