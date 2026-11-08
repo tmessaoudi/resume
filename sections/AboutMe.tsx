@@ -20,6 +20,9 @@ import {
   ZigIcon,
 } from "../components/SVGIcons.tsx";
 
+const MS_PER_YEAR = 365.25 * 24 * 60 * 60 * 1000;
+const yearsOfExperience = Math.floor((Date.now() - Date.UTC(2017, 0)) / MS_PER_YEAR);
+
 const technologies = [
   { icon: <TypeScriptIcon />, label: "Typescript" },
   { icon: <ReactIcon />, label: "React" },
@@ -52,10 +55,11 @@ export function AboutMe() {
               Full Stack Engineer specializing in medical imaging software
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I’m based in France, and comfortable working remotely. For the past six years I’ve built medical imaging
-              software: DICOM pipelines, MRI viewers and an operator application for an MRI scanner. I’m driven by tough
-              problems, whether it’s squeezing out extra performance in a data-heavy application or designing solutions
-              for uncommon issues that don’t fit the usual patterns.
+              I’m a software engineer with {yearsOfExperience}{" "}
+              years of experience, based in France and comfortable working remotely. For the past six years I’ve built
+              medical imaging software: DICOM pipelines, MRI viewers and an operator application for an MRI scanner. I’m
+              driven by tough problems, whether it’s squeezing out extra performance in a data-heavy application or
+              designing solutions for uncommon issues that don’t fit the usual patterns.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               I’ve tackled challenges across diverse industries like automotive, telecom, research labs, voucher
