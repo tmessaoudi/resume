@@ -23,6 +23,7 @@ import {
   SpringIcon,
   SqliteIcon,
   TailwindcssIcon,
+  TanStackIcon,
   TypeScriptIcon,
   WebsiteIcon,
 } from "../components/SVGIcons.tsx";
@@ -89,7 +90,7 @@ const JOBS: Job[] = [
     projects: [
       {
         title: { en: "🖥️ MRI Operator Web Application", fr: "🖥️ Application web opérateur pour IRM" },
-        icons: [TypeScriptIcon, ReactIcon, TailwindcssIcon],
+        icons: [TypeScriptIcon, ReactIcon, TanStackIcon, TailwindcssIcon],
         bullets: [
           {
             en:
@@ -173,10 +174,14 @@ const JOBS: Job[] = [
         ],
         bullets: [
           {
-            en:
-              "Refactored the MRI viewer and admin panel, adding segmentation correction, lesion tracking and 3D rendering",
+            en: "Refactored with a new admin panel, interactive data visualizations, and a robust MRI viewer, ...",
             fr:
-              "Refonte du visualiseur IRM et de l'administration : correction de segmentation, suivi de lésions, rendu 3D",
+              "Nouveau panneau d'administration, visualisations de données interactives et visualiseur IRM robuste, ...",
+          },
+          {
+            en: "Added segmentation correction, lesion tracking, 3D rendering, oblique views and multi-modality",
+            fr:
+              "Ajout de la correction de segmentation, du suivi de lésions, du rendu 3D, des vues obliques et du multimodal",
           },
         ],
       },
@@ -228,13 +233,20 @@ const JOBS: Job[] = [
     },
     bullets: [
       {
-        en: "Built web apps from scratch for IRT System X (research dashboard), Thalès (inventory), PSA (file parser)",
-        fr:
-          "Applications web créées de zéro pour IRT System X (recherche), Thalès (inventaire), PSA (parseur de fichiers)",
+        en: "IRT System X: built a central dashboard for research project web services from scratch",
+        fr: "IRT System X : tableau de bord central des services web de projets de recherche, créé de zéro",
       },
       {
-        en: "Refactored SFR Altice's customer-service CRM with a new architecture and Mail/SMS notifications",
-        fr: "Refonte du CRM du service client de SFR Altice : nouvelle architecture et notifications e-mail/SMS",
+        en: "SFR Altice: refactored the customer-service CRM with a new architecture and Mail/SMS notifications",
+        fr: "SFR Altice : refonte du CRM du service client, nouvelle architecture et notifications e-mail/SMS",
+      },
+      {
+        en: "Thalès: built a local web app to visualize military inventory data from Excel files",
+        fr: "Thalès : application web locale de visualisation de données militaires d'inventaire issues d'Excel",
+      },
+      {
+        en: "PSA: built a backend service to parse raw automotive files (.a2l, .hex, .ulp)",
+        fr: "PSA : service back-end d'analyse de fichiers automobiles bruts (.a2l, .hex, .ulp)",
       },
     ],
   },
@@ -252,7 +264,7 @@ const SKILLS: { label: Text; items: [Icon, string][] }[] = [
   },
   {
     label: { en: "Frontend Development:", fr: "Front-end :" },
-    items: [[ReactIcon, "React"], [TailwindcssIcon, "Tailwind CSS"], [RemixIcon, "Remix"]],
+    items: [[ReactIcon, "React"], [TanStackIcon, "TanStack"], [TailwindcssIcon, "Tailwind CSS"], [RemixIcon, "Remix"]],
   },
   {
     label: { en: "Backend Development:", fr: "Back-end :" },
@@ -346,7 +358,7 @@ export function Resume({ lang }: { lang: Lang }) {
               </p>
               {job.projects?.map((project) => (
                 <div key={project.title.en} class="mt-1">
-                  <span class="flex items-center justify-between font-medium">
+                  <span class="flex items-center justify-between font-semibold">
                     {project.title[lang]}
                     <span class="flex gap-2">
                       {project.icons.map((ProjectIcon, index) => <ProjectIcon key={index} />)}
